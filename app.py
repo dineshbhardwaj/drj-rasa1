@@ -695,15 +695,6 @@ map_choices = { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera.mp3
                     "Zulfa - (Ft Dr.Zeus) (RoyalJatt.Com)" : "https://drj1.000webhostapp.com/Zulfa_-__Ft_Dr.Zeus_-Jaz_Dhami-www.Mp3Mad.Com.mp3" }
 
 
-[3:28] 
-OUTPUT
-
-
-[3:28] 
-[('New York Jets', 100), ('New York Giants', 79)]
-In [26]:
-
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
