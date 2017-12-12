@@ -29,341 +29,341 @@ import re
 from flask import Flask
 from flask import request
 from flask import make_response
-#from fuzzywuzzy import fuzz
-#from fuzzywuzzy import process
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 # Flask app should start in global layout
 app = Flask(__name__)
 
 
-#choices = ["Tera Mera Pyar Amar"
-#           "Tujhse Naraz Nahi Zindagi"
-#           "Tere Bina Besuaadi lage ye ratiyan"
-#           "01 Radha nam sang brij 84 kos"
-#           "01 SURAJ KI GARMI SE"
-#           "04 RAAM NAAM SE TUMNE BANDE"
-#           "06 KUCHH PAL KI ZINDAGI"
-#           "22 BHALA KISI KA KAR NA SAKO"
-#           "Sunder Kand(Mzc.in)"
-#           "Hanuman Ji Ki Aarti"
-#           "He Ram He Ram"
-#           "Jai Jai Hanuman Gunsai"
-#           "Kabir Amritvani - 1"
-#           "Kabir Amritvani - 2"
-#           "Manavta_ke_mann_mandir_mein"
-#           "Bandaa Re - www.Songs.PK"
-#           "Om Jagdish Hare"
-#           "Track01"
-#           "Sunder Kand(Mzc.in)"
-#           "Asha Bhosle"
-#           "Dr.Balamuralikrishna"
-#           "Pt.Ajoy Chakrabarty with Kaushiki Chakrabarty"
-#           "Pt.Hari Prasad Chaurasia"
-#           "Hariharan"
-#           "Lata Mangeshkar wav"
-#           "Maa Tujhe Salaam"
-#           "Mile sur mera tumhara"
-#           "National Anthem collective instrumental version"
-#           "National Anthem collective vocal version wav"
-#           " Vande Mataram '98 - Lata Mangeshkar"
-#           "Lonely"
-#           "Words"
-#           "Heaven"
-#           "It's Only Love"
-#           "When You Love Someone"
-#           "10.EVERYTHING I DO"
-#           "In The End"
-#           "It's My Life"
-#           "04.SUMMER OF '69"
-#           "So Happy Together"
-#           "Mangal Bhairav"
-#           "Mangal Bhairav2"
-#           "Raga Durgawati: Alap"
-#           "Raga Durgawati: Gat in teen tal"
-#           "Raga Durgawati: Drut gat in teental"
-#           "Raga Mishra Shivaranjani: Alap"
-#           "Raga Mishra Shivaranjani: Dhun in dadra tal"
-#           "01 KHUDA JAANE"
-#           "Track 02"
-#           "Track 06"
-#           "Maula Mere Lele Meri Jaan"
-#           "Track 11"
-#           "06 TERI UMEED TERA INTZAR"
-#           "suna"
-#           "Udit & Alka"
-#           "01 KYON KI ITNA PYAR"
-#           "05Layi Vi Na Gayee"
-#           "Track 04"
-#           "JAB KOI BAAT BIGAD JAAYE"
-#           "13 LAGI AAJ SAWAN KI"
-#           "Jee Karda - www.Songs.PK"
-#           "14 SATYAM SHIVAM SUNDRAM"
-#           "Track 1"
-#           "Main Agar Kahoon"
-#           "19 TUJH MEIN RAB DIKHTA HAI ("
-#           "20 to chaloon"
-#           "21 Tadap Tadap"
-#           "22 aina tenu pyar"
-#           "line in track 20"
-#           "25 Aaja Sohneya"
-#           "26 SAJJAN  RUSS  GAYE"
-#           "27 DIL TAN PAGAL HAI"
-#           "MUSIC PLANET KALLI BEH KE SOCHIN"
-#           "Teri Ore - www.Songs.PK"
-#           "Kaise Mujhe - www.Songs.PK"
-#           "Guzarish - www.Songs.PK"
-#           "01 DEKHA HAI PEHLI BAAR"
-#           "02 TUMSE MILNE KI TAMMANA"
-#           "03 BAHUT PYAR KARTE (F)"
-#           "04 JEYEN TO JEYEN KAISE"
-#           "05 TU SAYAR HAI"
-#           "Track 06"
-#           "07 MERA DIL BHI KITNA"
-#           "Track 08"
-#           "09 BAHUT PYAR KARTE (M)"
-#           "01CHHOTI CHHOTI RAATEIN"
-#           "SIVA"
-#           "FARIYAAD"
-#           "04DEKHTE HI DEKHTE"
-#           "05MERI DUNIYA MEIN"
-#           "BOOMBARA"
-#           "07DAAROO VICH PYAAR"
-#           "BIN"
-#           "RU"
-#           "10CHHOTI CHHOTI RAATEIN PART2"
-#           "11PYAAR HUM KO HONE LAGA"
-#           "12MERI DUNIYA MEIN"
-#           "O...Saya - www.Songs.PK"
-#           "Riots - www.Songs.PK"
-#           "Mausam & Escape - www.Songs.PK"
-#           "Paper Planes - www.Songs.PK"
-#           "Paper Planes (DFA Remix) - www.Songs.PK"
-#           "Ringa Ringa - www.Songs.PK"
-#           "Liquid Dance - www.Songs.PK"
-#           "Latika's Theme - www.Songs.PK"
-#           "Aaj Ki Raat - www.Songs.PK"
-#           "Millionaire - www.Songs.PK"
-#           "Gangsta Blues - www.Songs.PK"
-#           "Dreams On Fire - www.Songs.PK"
-#           "Jai Ho - www.Songs.PK"
-#           "Aakhnkho Mein Jal Raha Hai"
-#           "Din Kuch Aise Guzarta"
-#           "Ek Parvaz Dikhayi Di Hai"
-#           "Speaks"
-#           "Speeak"
-#           "Speaks"
-#           "Haat Chhute bhi To"
-#           "Ik Purana Mausam Lauta"
-#           "Shaam Se aankhmein Nami Si ha"
-#           "Woh Khat Ke Purze Uda Rahatha"
-#           "Zindage yun Hui Basar Tanha"
-#           "01 TOH PHIR AAO MUSTAFA ZAHID"
-#           "01 ZARA SA"
-#           "01Kya Mujhe Pyaar Hai"
-#           "01Teri Yaadon Mein"
-#           "01Tu Hi Meri Shab Hai"
-#           "Aadat"
-#           "JUDAI"
-#           "Track 2"
-#           "02 PEHLI NAZAR MEIN"
-#           "02 TERA MERA RISHTA MUSTAFA Z"
-#           "Tu Meri Dost Hain - Songs.PK"
-#           "Bheegi"
-#           "02ChalChale"
-#           "Bin"
-#           "03 JAANE TU MERA KYA HAI"
-#           "Track 3"
-#           "03Tu Jo Nahin"
-#           "Track 4"
-#           "9. TU MERI JAAN HAIN"
-#           "a01 ek din teri"
-#           "Track 04"
-#           "01. KYON KI ITNA PYAR"
-#           "thoda sa pyaar hua"
-#           "EK LADKI KO DEKHA TO"
-#           "03. DIL KE BADLE SANAM"
-#           "Jugni"
-#           "Aa Bhi Ja Aa"
-#           "aadat"
-#           "Track 01"
-#           "Kuch Is Tarah (Mp3HunGama.Com)"
-#           "Track 12"
-#           "Dekho Maine Dekha"
-#           "chaha hai tujhko"
-#           "Chalo Tumko Lekar Chale @ Mp3Hungama.com"
-#           "choti choti raatein"
-#           "Tere Bin - Rabbi Shergill"
-#           "DEKHA TUJHE TO"
-#           "03 dil de diya hai"
-#           "dil..."
-#           "Track 1"
-#           "HUM DUM SUNIYO RE                              "
-#           "HUM HAIN RAHI PYAR KE - KASH"
-#           "HUM HAIN RAHI PYAR KE - WOH M"
-#           "humko sirf tumse pyaar..."
-#           "INTEHA HO GAYI INTEZAAR KI"
-#           "1Is tarah aashiqi ka"
-#           "Dil To Bachcha Hai - www.Songs.PK"
-#           "Track 01"
-#           "Tera Saath Hai Kitna Pyara"
-#           "Jadu hai Nasha Hai @ Mp3Hungama.com"
-#           "Track 05"
-#           "Pehla Nasha"
-#           "11 kyon kisi ko"
-#           "kyon ke itna pyar "
-#           "Leja Leja"
-#           "Main Jahaan Rahoon"
-#           "Mauja Hi Mauja - [Songs.PK]"
-#           "Maula Mere Le Le Meri Jaan - [Songs.PK]"
-#           "Maula Mere Maula"
-#           "MERA DIL BHI KITNA - K SANU &"
-#           "MITRAN DI CHHATRI"
-#           "pehla nasha"
-#           "PYAR SE MERI TARAF"
-#           "Behene De - www.Songs.PK"
-#           "Bulla Ki Jaana"
-#           "Jaane Kaise - Songs.PK"
-#           "Bluffmaster (2005) - 04 - Right Here Right Now"
-#           "Saagar Jaise Ankhon"
-#           "BUHUT PYAR KARTE"
-#           "Musafirak13"
-#           "SUCH KEH RAHA HAI"
-#           "tera chehra"
-#           "Tere Bin "
-#           "Track  1"
-#           "Tumse Milna"
-#           "Tune Jo Na Kaha - www.Songs.PK"
-#           "Woh Pehli Baar"
-#           "Ya Rabba [DJLUV]"
-#           "zara zara"
-#           "Zindagi Bangae Ho Tum"
-#           "Aaj Kal Tere Mere Pyar Ke"
-#           "Main Shair To Nahin"
-#           "Chabi Kho Jaye"
-#           "Akele hain chale aao"
-#           "An Evening In Paris"
-#           "Mere Man Ki Ganga - www.songs.pk"
-#           "Chithi Aai Hai - Pankaj Udhas"
-#           "DIl KI Aawaz Bhi Sun"
-#           "Dost Dost Na Raha -www.songs.pk"
-#           "Duniya Na Bhaaye - Basant Bahaar 1956 - Mohammed Rafi"
-#           "hai preet jahan ki reet"
-#           "hamne jafa na sikhi"
-#           "Har Dil Jo Pyar Karega - www.songs.pk"
-#           "Hum Bewafa Hargiz Na The"
-#           "Hum Tum Se Judaa Ho Ke"
-#           "huye hum jin ke liye"
-#           "Kasie Kahin Hum"
-#           "kya hua tera wada"
-#           "Suhana Safar Aur Yeh"
-#           "MANZILEN APNI JAGAH"
-#           "Huzur Is Kadar"
-#           "Mere Dosti Mera Pyar"
-#           "Milan (1965) - Aaj Dil Pe Koi"
-#           "Nain Lad Jai Hai [From Ganga Jumna]"
-#           "Aaj Mausam Bada Be-Iman Hai [From Loafer]"
-#           "khuda"
-#           "Akele hain chale aao{Rafi}"
-#           "Ek tha gul aur ek thi bulbul"
-#           "Mujhe Buddah Mil Gaya -www.songs.pk"
-#           "Mujhe Ishq Hai Tujhe Se"
-#           "O Meri Sharmilee"
-#           "Aye Meri Zohra Jabeen"
-#           "Aye Mere pyare watan"
-#           "Tu pyar ka sagar hai"
-#           "Zindagi Ki Na Toote"
-#           "Zihale Masti"
-#           "Jab Hum Jawan Honge"
-#           "Hum Bane Tum Bane"
-#           "Chahe Lakh Tufan"
-#           "Dekho Maine Dekha"
-#           "Hum Tum Dono Milke"
-#           "Mere Pyar Ki Umar"
-#           "Teri Yaad Aayee"
-#           "Pyaar Kiya Nahin Jata"
-#           "Aankhon Mein Kajal Hai"
-#           "Mera Pyar Bhi Tu Hai - Saathi"
-#           "Bhanvare Ne Khilaya"
-#           "Mere Saathi Jivan Saathi"
-#           "Kya Khoob Lagti Ho - Dharmatma"
-#           "Humrahi Mere Humrahi"
-#           "Janam Janam Ka Saath"
-#           "Hum To Tere Aashiq - Farz"
-#           "Paani Re Paani - Shor"
-#           "Main Hoon Pyar Tera [Teesri Manzil]"
-#           "Phool Tumhe Bheja"
-#           "hum tumhe chahte hain"
-#           "Jeevan Se Bhari Teri"
-#           "Jo Tumko Ho Pasand"
-#           "Sau Baar Janam Leinge"
-#           "TU PYAR KA SAGAR HAI"
-#           "Dil Cheez Kya Hai"
-#           "Wada Karo"
-#           "Wadiyan Mera Daman [From Abhilasha]"
-#           "Yaad na jaye"
-#           "yaadon ki baarat nikli hai"
-#           "Yeh Mera Prem Patra - www.songs.pk"
-#           "YEH DIL NA HOTA BECHARA  "
-#           "Track 01"
-#           "01SAJJAN RUS GAYE"
-#           "02 botalan sharab diyan"
-#           "02 mundiya tu bach ke"
-#           "Mehfil"
-#           "Ae Jo Seeli Seeli Aundi Ae Hawa"
-#           "ik aisi ladki thi"
-#           "KOI"
-#           "3 DHOL NEW"
-#           "Track 1"
-#           "Dil Ta Pagal"
-#           "01_ISHQE_DI_MAAR"
-#           "01"
-#           "NAAG JAZZY B"
-#           "SAPNE MAIN MILTE HAIN SATYA"
-#           "Tum Saath Ho - Songspk.LINK"
-#           "Boond Boond - MyMp3Song.com"
-#           "12 Saal (DjPunjab.CoM)"
-#           "Aise Na Mujhe Tum Dekho (Armaan Malik) Full Song"
-#           "Mere Sapno Ki Rani Kab - www.hotmentos.com"
-#           "Att Goriye"
-#           "Jaguar (feat. Bohemia) (DJJOhAL.Com)"
-#           "Baliye (Laung Gawacha) (Mr-Jatt.com)"
-#           "Bapu Zimidar (RoyalJatt.Com)"
-#           "BILAL SAEED -ADHI ADHI RAAT (DjPunjab.CoM)"
-#           "2 Number"
-#           "Black Suit (RoyalJatt.Com)"
-#           "Blow (RoyalJatt.Com)"
-#           "Bolo Har Har Har (Mr-Jatt.com)"
-#           "Breakup Party - Yo Yo Honey Singh (Ft. Leo) - ApnaFunz.Com"
-#           "Brown Boi (feat. Bling Singh)"
-#           "Chupke Se - Saathiya (RoyalJatt.Com)"
-#           "Chura Liya Hai Tumne Jo Dil Ko (RoyalJatt.Com)"
-#           "Dil Cheez Tujhe Dedi(Mr-Jatt.com)"
-#           "Halka Halka Suroor (Nusrat Fateh Ali Khan Cover)"
-#           "Ford V s Ford (RoyalJatt.Com)"
-#           "Ambarsariya - www.DJMaza.Com"
-#           "Horn Blow (RaagJatt.Com)"
-#           "Hulara (RoyalJatt.Com)"
-#           "Jatt Sikka (RoyalJatt.Com)"
-#           "Jugni @ Mp3HunGama.Com"
-#           "Jutti Kasuri - iPendu.com"
-#           "Khaab(Mr-Jatt.com)"
-#           " (DJJOhAL.Com)"
-#           "Laung Gawacha (Mr-Jatt.com)"
-#           "Look    ::www.RAAG.ME::"
-#           "Mainu Single Rehna - PagalWorld.com"
-#           "Mere Mehboob Qayamat Hogi (RoyalJatt.Com)"
-#           "Munda Iphone Warga (RoyalJatt.Com)"
-#           "O Re Piya"
-#           "One Dream(Mr-Jatt.com)"
-#           "Outfit - Guru Randhawa (RaagTune.Com)"
-#           "Patola (RoyalJatt.Com)"
-#           "Dilko - www.Songs.PK"
-#           "Roop Tera Mastana (Aradhana)    ::www.RAAG.ME::"
-#           "Sapna Jahan - MyMp3Song.Com"
-#           "tinka tinka"
-#           "Tu Hai Ki Nahi [Mixmp3.In]"
-#           "Zara Zara"
-#           "Zulfa - (Ft Dr.Zeus) (RoyalJatt.Com)" ]
+choices = ["Tera Mera Pyar Amar" ,
+           "Tujhse Naraz Nahi Zindagi" ,
+           "Tere Bina Besuaadi lage ye ratiyan" ,
+           "01 Radha nam sang brij 84 kos" ,
+           "01 SURAJ KI GARMI SE" ,
+           "04 RAAM NAAM SE TUMNE BANDE" ,
+           "06 KUCHH PAL KI ZINDAGI" ,
+           "22 BHALA KISI KA KAR NA SAKO" ,
+           "Sunder Kand(Mzc.in)" ,
+           "Hanuman Ji Ki Aarti" ,
+           "He Ram He Ram" ,
+           "Jai Jai Hanuman Gunsai" ,
+           "Kabir Amritvani - 1" ,
+           "Kabir Amritvani - 2" ,
+           "Manavta_ke_mann_mandir_mein" ,
+           "Bandaa Re - www.Songs.PK" ,
+           "Om Jagdish Hare" ,
+           "Track01" ,
+           "Sunder Kand(Mzc.in)" ,
+           "Asha Bhosle" ,
+           "Dr.Balamuralikrishna" ,
+           "Pt.Ajoy Chakrabarty with Kaushiki Chakrabarty" ,
+           "Pt.Hari Prasad Chaurasia" ,
+           "Hariharan" ,
+           "Lata Mangeshkar wav" ,
+           "Maa Tujhe Salaam" ,
+           "Mile sur mera tumhara" ,
+           "National Anthem collective instrumental version" ,
+           "National Anthem collective vocal version wav" ,
+           " Vande Mataram '98 - Lata Mangeshkar" ,
+           "Lonely" ,
+           "Words" ,
+           "Heaven" ,
+           "It's Only Love" ,
+           "When You Love Someone" ,
+           "10.EVERYTHING I DO" ,
+           "In The End" ,
+           "It's My Life" ,
+           "04.SUMMER OF '69" ,
+           "So Happy Together" ,
+           "Mangal Bhairav" ,
+           "Mangal Bhairav2" ,
+           "Raga Durgawati: Alap" ,
+           "Raga Durgawati: Gat in teen tal" ,
+           "Raga Durgawati: Drut gat in teental" ,
+           "Raga Mishra Shivaranjani: Alap" ,
+           "Raga Mishra Shivaranjani: Dhun in dadra tal" ,
+           "01 KHUDA JAANE" ,
+           "Track 02" ,
+           "Track 06" ,
+           "Maula Mere Lele Meri Jaan" ,
+           "Track 11" ,
+           "06 TERI UMEED TERA INTZAR" ,
+           "suna" ,
+           "Udit & Alka" ,
+           "01 KYON KI ITNA PYAR" ,
+           "05Layi Vi Na Gayee" ,
+           "Track 04" ,
+           "JAB KOI BAAT BIGAD JAAYE" ,
+           "13 LAGI AAJ SAWAN KI" ,
+           "Jee Karda - www.Songs.PK" ,
+           "14 SATYAM SHIVAM SUNDRAM" ,
+           "Track 1" ,
+           "Main Agar Kahoon" ,
+           "19 TUJH MEIN RAB DIKHTA HAI (" ,
+           "20 to chaloon" ,
+           "21 Tadap Tadap" ,
+           "22 aina tenu pyar" ,
+           "line in track 20" ,
+           "25 Aaja Sohneya" ,
+           "26 SAJJAN  RUSS  GAYE" ,
+           "27 DIL TAN PAGAL HAI" ,
+           "MUSIC PLANET KALLI BEH KE SOCHIN" ,
+           "Teri Ore - www.Songs.PK" ,
+           "Kaise Mujhe - www.Songs.PK" ,
+           "Guzarish - www.Songs.PK" ,
+           "01 DEKHA HAI PEHLI BAAR" ,
+           "02 TUMSE MILNE KI TAMMANA" ,
+           "03 BAHUT PYAR KARTE (F)" ,
+           "04 JEYEN TO JEYEN KAISE" ,
+           "05 TU SAYAR HAI" ,
+           "Track 06" ,
+           "07 MERA DIL BHI KITNA" ,
+           "Track 08" ,
+           "09 BAHUT PYAR KARTE (M)" ,
+           "01CHHOTI CHHOTI RAATEIN" ,
+           "SIVA" ,
+           "FARIYAAD" ,
+           "04DEKHTE HI DEKHTE" ,
+           "05MERI DUNIYA MEIN" ,
+           "BOOMBARA" ,
+           "07DAAROO VICH PYAAR" ,
+           "BIN" ,
+           "RU" ,
+           "10CHHOTI CHHOTI RAATEIN PART2" ,
+           "11PYAAR HUM KO HONE LAGA" ,
+           "12MERI DUNIYA MEIN" ,
+           "O...Saya - www.Songs.PK" ,
+           "Riots - www.Songs.PK" ,
+           "Mausam & Escape - www.Songs.PK" ,
+           "Paper Planes - www.Songs.PK" ,
+           "Paper Planes (DFA Remix) - www.Songs.PK" ,
+           "Ringa Ringa - www.Songs.PK" ,
+           "Liquid Dance - www.Songs.PK" ,
+           "Latika's Theme - www.Songs.PK" ,
+           "Aaj Ki Raat - www.Songs.PK" ,
+           "Millionaire - www.Songs.PK" ,
+           "Gangsta Blues - www.Songs.PK" ,
+           "Dreams On Fire - www.Songs.PK" ,
+           "Jai Ho - www.Songs.PK" ,
+           "Aakhnkho Mein Jal Raha Hai" ,
+           "Din Kuch Aise Guzarta" ,
+           "Ek Parvaz Dikhayi Di Hai" ,
+           "Speaks" ,
+           "Speeak" ,
+           "Speaks" ,
+           "Haat Chhute bhi To" ,
+           "Ik Purana Mausam Lauta" ,
+           "Shaam Se aankhmein Nami Si ha" ,
+           "Woh Khat Ke Purze Uda Rahatha" ,
+           "Zindage yun Hui Basar Tanha" ,
+           "01 TOH PHIR AAO MUSTAFA ZAHID" ,
+           "01 ZARA SA" ,
+           "01Kya Mujhe Pyaar Hai" ,
+           "01Teri Yaadon Mein" ,
+           "01Tu Hi Meri Shab Hai" ,
+           "Aadat" ,
+           "JUDAI" ,
+           "Track 2" ,
+           "02 PEHLI NAZAR MEIN" ,
+           "02 TERA MERA RISHTA MUSTAFA Z" ,
+           "Tu Meri Dost Hain - Songs.PK" ,
+           "Bheegi" ,
+           "02ChalChale" ,
+           "Bin" ,
+           "03 JAANE TU MERA KYA HAI" ,
+           "Track 3" ,
+           "03Tu Jo Nahin" ,
+           "Track 4" ,
+           "9. TU MERI JAAN HAIN" ,
+           "a01 ek din teri" ,
+           "Track 04" ,
+           "01. KYON KI ITNA PYAR" ,
+           "thoda sa pyaar hua" ,
+           "EK LADKI KO DEKHA TO" ,
+           "03. DIL KE BADLE SANAM" ,
+           "Jugni" ,
+           "Aa Bhi Ja Aa" ,
+           "aadat" ,
+           "Track 01" ,
+           "Kuch Is Tarah (Mp3HunGama.Com)" ,
+           "Track 12" ,
+           "Dekho Maine Dekha" ,
+           "chaha hai tujhko" ,
+           "Chalo Tumko Lekar Chale @ Mp3Hungama.com" ,
+           "choti choti raatein" ,
+           "Tere Bin - Rabbi Shergill" ,
+           "DEKHA TUJHE TO" ,
+           "03 dil de diya hai" ,
+           "dil..." ,
+           "Track 1" ,
+           "HUM DUM SUNIYO RE                              " ,
+           "HUM HAIN RAHI PYAR KE - KASH" ,
+           "HUM HAIN RAHI PYAR KE - WOH M" ,
+           "humko sirf tumse pyaar..." ,
+           "INTEHA HO GAYI INTEZAAR KI" ,
+           "1Is tarah aashiqi ka" ,
+           "Dil To Bachcha Hai - www.Songs.PK" ,
+           "Track 01" ,
+           "Tera Saath Hai Kitna Pyara" ,
+           "Jadu hai Nasha Hai @ Mp3Hungama.com" ,
+           "Track 05" ,
+           "Pehla Nasha" ,
+           "11 kyon kisi ko" ,
+           "kyon ke itna pyar " ,
+           "Leja Leja" ,
+           "Main Jahaan Rahoon" ,
+           "Mauja Hi Mauja - [Songs.PK]" ,
+           "Maula Mere Le Le Meri Jaan - [Songs.PK]" ,
+           "Maula Mere Maula" ,
+           "MERA DIL BHI KITNA - K SANU &" ,
+           "MITRAN DI CHHATRI" ,
+           "pehla nasha" ,
+           "PYAR SE MERI TARAF" ,
+           "Behene De - www.Songs.PK" ,
+           "Bulla Ki Jaana" ,
+           "Jaane Kaise - Songs.PK" ,
+           "Bluffmaster (2005) - 04 - Right Here Right Now" ,
+           "Saagar Jaise Ankhon" ,
+           "BUHUT PYAR KARTE" ,
+           "Musafirak13" ,
+           "SUCH KEH RAHA HAI" ,
+           "tera chehra" ,
+           "Tere Bin " ,
+           "Track  1" ,
+           "Tumse Milna" ,
+           "Tune Jo Na Kaha - www.Songs.PK" ,
+           "Woh Pehli Baar" ,
+           "Ya Rabba [DJLUV]" ,
+           "zara zara" ,
+           "Zindagi Bangae Ho Tum" ,
+           "Aaj Kal Tere Mere Pyar Ke" ,
+           "Main Shair To Nahin" ,
+           "Chabi Kho Jaye" ,
+           "Akele hain chale aao" ,
+           "An Evening In Paris" ,
+           "Mere Man Ki Ganga - www.songs.pk" ,
+           "Chithi Aai Hai - Pankaj Udhas" ,
+           "DIl KI Aawaz Bhi Sun" ,
+           "Dost Dost Na Raha -www.songs.pk" ,
+           "Duniya Na Bhaaye - Basant Bahaar 1956 - Mohammed Rafi" ,
+           "hai preet jahan ki reet" ,
+           "hamne jafa na sikhi" ,
+           "Har Dil Jo Pyar Karega - www.songs.pk" ,
+           "Hum Bewafa Hargiz Na The" ,
+           "Hum Tum Se Judaa Ho Ke" ,
+           "huye hum jin ke liye" ,
+           "Kasie Kahin Hum" ,
+           "kya hua tera wada" ,
+           "Suhana Safar Aur Yeh" ,
+           "MANZILEN APNI JAGAH" ,
+           "Huzur Is Kadar" ,
+           "Mere Dosti Mera Pyar" ,
+           "Milan (1965) - Aaj Dil Pe Koi" ,
+           "Nain Lad Jai Hai [From Ganga Jumna]" ,
+           "Aaj Mausam Bada Be-Iman Hai [From Loafer]" ,
+           "khuda" ,
+           "Akele hain chale aao{Rafi}" ,
+           "Ek tha gul aur ek thi bulbul" ,
+           "Mujhe Buddah Mil Gaya -www.songs.pk" ,
+           "Mujhe Ishq Hai Tujhe Se" ,
+           "O Meri Sharmilee" ,
+           "Aye Meri Zohra Jabeen" ,
+           "Aye Mere pyare watan" ,
+           "Tu pyar ka sagar hai" ,
+           "Zindagi Ki Na Toote" ,
+           "Zihale Masti" ,
+           "Jab Hum Jawan Honge" ,
+           "Hum Bane Tum Bane" ,
+           "Chahe Lakh Tufan" ,
+           "Dekho Maine Dekha" ,
+           "Hum Tum Dono Milke" ,
+           "Mere Pyar Ki Umar" ,
+           "Teri Yaad Aayee" ,
+           "Pyaar Kiya Nahin Jata" ,
+           "Aankhon Mein Kajal Hai" ,
+           "Mera Pyar Bhi Tu Hai - Saathi" ,
+           "Bhanvare Ne Khilaya" ,
+           "Mere Saathi Jivan Saathi" ,
+           "Kya Khoob Lagti Ho - Dharmatma" ,
+           "Humrahi Mere Humrahi" ,
+           "Janam Janam Ka Saath" ,
+           "Hum To Tere Aashiq - Farz" ,
+           "Paani Re Paani - Shor" ,
+           "Main Hoon Pyar Tera [Teesri Manzil]" ,
+           "Phool Tumhe Bheja" ,
+           "hum tumhe chahte hain" ,
+           "Jeevan Se Bhari Teri" ,
+           "Jo Tumko Ho Pasand" ,
+           "Sau Baar Janam Leinge" ,
+           "TU PYAR KA SAGAR HAI" ,
+           "Dil Cheez Kya Hai" ,
+           "Wada Karo" ,
+           "Wadiyan Mera Daman [From Abhilasha]" ,
+           "Yaad na jaye" ,
+           "yaadon ki baarat nikli hai" ,
+           "Yeh Mera Prem Patra - www.songs.pk" ,
+           "YEH DIL NA HOTA BECHARA  " ,
+           "Track 01" ,
+           "01SAJJAN RUS GAYE" ,
+           "02 botalan sharab diyan" ,
+           "02 mundiya tu bach ke" ,
+           "Mehfil" ,
+           "Ae Jo Seeli Seeli Aundi Ae Hawa" ,
+           "ik aisi ladki thi" ,
+           "KOI" ,
+           "3 DHOL NEW" ,
+           "Track 1" ,
+           "Dil Ta Pagal" ,
+           "01_ISHQE_DI_MAAR" ,
+           "01" ,
+           "NAAG JAZZY B" ,
+           "SAPNE MAIN MILTE HAIN SATYA" ,
+           "Tum Saath Ho - Songspk.LINK" ,
+           "Boond Boond - MyMp3Song.com" ,
+           "12 Saal (DjPunjab.CoM)" ,
+           "Aise Na Mujhe Tum Dekho (Armaan Malik) Full Song" ,
+           "Mere Sapno Ki Rani Kab - www.hotmentos.com" ,
+           "Att Goriye" ,
+           "Jaguar (feat. Bohemia) (DJJOhAL.Com)" ,
+           "Baliye (Laung Gawacha) (Mr-Jatt.com)" ,
+           "Bapu Zimidar (RoyalJatt.Com)" ,
+           "BILAL SAEED -ADHI ADHI RAAT (DjPunjab.CoM)" ,
+           "2 Number" ,
+           "Black Suit (RoyalJatt.Com)" ,
+           "Blow (RoyalJatt.Com)" ,
+           "Bolo Har Har Har (Mr-Jatt.com)" ,
+           "Breakup Party - Yo Yo Honey Singh (Ft. Leo) - ApnaFunz.Com" ,
+           "Brown Boi (feat. Bling Singh)" ,
+           "Chupke Se - Saathiya (RoyalJatt.Com)" ,
+           "Chura Liya Hai Tumne Jo Dil Ko (RoyalJatt.Com)" ,
+           "Dil Cheez Tujhe Dedi(Mr-Jatt.com)" ,
+           "Halka Halka Suroor (Nusrat Fateh Ali Khan Cover)" ,
+           "Ford V s Ford (RoyalJatt.Com)" ,
+           "Ambarsariya - www.DJMaza.Com" ,
+           "Horn Blow (RaagJatt.Com)" ,
+           "Hulara (RoyalJatt.Com)" ,
+           "Jatt Sikka (RoyalJatt.Com)" ,
+           "Jugni @ Mp3HunGama.Com" ,
+           "Jutti Kasuri - iPendu.com" ,
+           "Khaab(Mr-Jatt.com)" ,
+           " (DJJOhAL.Com)" ,
+           "Laung Gawacha (Mr-Jatt.com)" ,
+           "Look    ::www.RAAG.ME::" ,
+           "Mainu Single Rehna - PagalWorld.com" ,
+           "Mere Mehboob Qayamat Hogi (RoyalJatt.Com)" ,
+           "Munda Iphone Warga (RoyalJatt.Com)" ,
+           "O Re Piya" ,
+           "One Dream(Mr-Jatt.com)" ,
+           "Outfit - Guru Randhawa (RaagTune.Com)" ,
+           "Patola (RoyalJatt.Com)" ,
+           "Dilko - www.Songs.PK" ,
+           "Roop Tera Mastana (Aradhana)    ::www.RAAG.ME::" ,
+           "Sapna Jahan - MyMp3Song.Com" ,
+           "tinka tinka" ,
+           "Tu Hai Ki Nahi [Mixmp3.In]" ,
+           "Zara Zara",
+           "Zulfa - (Ft Dr.Zeus) (RoyalJatt.Com)" ]
 #
 #map_choices =     { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera.mp3" ,
 #                    "Tujhse Naraz Nahi Zindagi" : "https://drj1.000webhostapp.com/tujhse_naraaz_nahin_zindagi__male__-_masoom_songs_-__naseeruddin_shah_-_jugal_hansraj__-_filmigaane.mp3" ,
@@ -715,10 +715,10 @@ def processRequest(req):
     print("processing req")
     input_data = str(req.get("result").get("resolvedQuery"))
     print("processing req 2")
-#    choice_val = process.extract(input_data, choices, limit=1)
+    choice_val = process.extract(input_data, choices, limit=1)
 #    choice_song_path = map_choices[choice_val]
     print(input_data)
-#    print(choice_val)
+    print(choice_val)
     data = input_data
     res = makeWebhookResult(data)
     return res
