@@ -715,7 +715,9 @@ def processRequest(req):
     input_data = str(req.get("result").get("resolvedQuery"))
     choice_val = process.extract(input_data, choices, limit=1)
     choice_song_path = map_choices[choice_val]
-    data = choice_val
+    print(input_data)
+    print(choice_val)
+    data = input_data
     res = makeWebhookResult(data)
     return res
 
