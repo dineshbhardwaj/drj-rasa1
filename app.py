@@ -24,6 +24,7 @@ from urllib.error import HTTPError
 
 import json
 import os
+import re
 
 from flask import Flask
 from flask import request
@@ -50,8 +51,23 @@ def webhook():
 
 
 def processRequest(req):
-    #if req.get("result").get("action") != "yahooWeatherForecast":
-    #    return {}
+    song1=re.compile('[tT]era.[mM]era*[sS]ong')
+    song2=re.compile('[tT]ujhse [Nn]ara[jz].*[sS]ong')
+    song3=re.compile('[tT]ere.*[Bb][ei]+n[a]+.*[sS]ong')
+    song4=re.compile('[Kk]yon[ ]*[kK][ei].*[iI]tna.*[sS]ong')
+    input_data = str(req.get("result").get("resolvedQuery"))
+    if re.search(song1,input_data) :
+        data = "<speak> <audio src=\"https://drj1.000webhostapp.com/tera.mp3\"> didn't get your MP3 audio file </audio> </speak>"
+    else if re.search(song2,input_data) :
+        data = "<speak> <audio src=\"https://drj1.000webhostapp.com/tujhse_naraaz_nahin_zindagi__male__-_masoom_songs_-__naseeruddin_shah_-_jugal_hansraj__-_filmigaane.mp3\"> didn't get your MP3 audio file </audio> </speak>"
+    else if re.search(song3,input_data) :
+        data = "<speak> <audio src=\"https://drj1.000webhostapp.com/bina.mp3\"> didn't get your MP3 audio file </audio> </speak>"
+    else if re.search(song4,input_data) :
+        data = "<speak> <audio src=\"https://drj1.000webhostapp.com/kyonki.mp3\"> didn't get your MP3 audio file </audio> </speak>"
+    else :
+        data = input_data        
+    #if req.get("result").get("resolvedQuery") != "":
+    #    return req.get("result").get("resolvedQuery")
     #baseurl = "https://query.yahooapis.com/v1/public/yql?"
     #yql_query = makeYqlQuery(req)
     #if yql_query is None:
@@ -59,7 +75,6 @@ def processRequest(req):
     #yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
     #result = urlopen(yql_url).read()
     #data = json.loads(result)
-    data = "response testing"
     res = makeWebhookResult(data)
     return res
 
@@ -82,7 +97,7 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-        "speech": speech,
+        "speech": data,
         "displayText": speech,
         # "data": data,
         # "contextOut": [],
