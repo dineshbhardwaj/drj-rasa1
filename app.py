@@ -719,8 +719,10 @@ def processRequest(req):
     print("processing req 2")
     print(input_data)
     choice_val = process.extract(input_data, choices, limit=1)
+    print("processing req 3")
     print(str(choice_val))
     choice_song_path = map_choices[choice_val[0][0]]
+    print("processing req 4")
     print(str(choice_song_path))
     data = input_data
     res = makeWebhookResult(data)
