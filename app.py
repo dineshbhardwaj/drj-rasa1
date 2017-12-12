@@ -724,7 +724,7 @@ def processRequest(req):
     choice_song_path = map_choices[choice_val[0][0]]
     print("processing req 4")
     print(str(choice_song_path))
-    data = input_data
+    data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
     res = makeWebhookResult(data)
     return res
 
