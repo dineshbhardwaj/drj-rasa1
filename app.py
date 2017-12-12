@@ -365,7 +365,7 @@ choices = ["Tera Mera Pyar Amar"
            "Zara Zara"
            "Zulfa - (Ft Dr.Zeus) (RoyalJatt.Com)" ]
 
-def map_choices = { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera.mp3"
+map_choices = { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera.mp3"
                     "Tujhse Naraz Nahi Zindagi" : "https://drj1.000webhostapp.com/tujhse_naraaz_nahin_zindagi__male__-_masoom_songs_-__naseeruddin_shah_-_jugal_hansraj__-_filmigaane.mp3"
                     "Tere Bina Besuaadi lage ye ratiyan" : "https://drj1.000webhostapp.com/bina.mp3"
                     "01 Radha nam sang brij 84 kos" : "https://drj1.000webhostapp.com/01_Radha_nam_sang_brij_84_kosh_yatr.mp3"
