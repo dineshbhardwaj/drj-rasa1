@@ -58,11 +58,11 @@ def processRequest(req):
     input_data = str(req.get("result").get("resolvedQuery"))
     if re.search(song1,input_data) :
         data = "<speak> <audio src=\"https://drj1.000webhostapp.com/tera.mp3\"> didn't get your MP3 audio file </audio> </speak>"
-    else if re.search(song2,input_data) :
+    elif re.search(song2,input_data) :
         data = "<speak> <audio src=\"https://drj1.000webhostapp.com/tujhse_naraaz_nahin_zindagi__male__-_masoom_songs_-__naseeruddin_shah_-_jugal_hansraj__-_filmigaane.mp3\"> didn't get your MP3 audio file </audio> </speak>"
-    else if re.search(song3,input_data) :
+    elif re.search(song3,input_data) :
         data = "<speak> <audio src=\"https://drj1.000webhostapp.com/bina.mp3\"> didn't get your MP3 audio file </audio> </speak>"
-    else if re.search(song4,input_data) :
+    elif re.search(song4,input_data) :
         data = "<speak> <audio src=\"https://drj1.000webhostapp.com/kyonki.mp3\"> didn't get your MP3 audio file </audio> </speak>"
     else :
         data = input_data        
