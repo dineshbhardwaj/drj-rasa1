@@ -713,10 +713,11 @@ def webhook():
 
 def processRequest(req):
     print("processing req")
-    print(str(input_data))
-    input_data = str(req.get("result").get("resolvedQuery"))
-    input_data = re.sub('[sS]ong', '', input_data)
-    input_data = re.sub('^[pP]lay', '', input_data)
+    input_data = str(req)
+    print(input_data)
+#    input_data = str(req.get("result").get("resolvedQuery"))
+#    input_data = re.sub('[sS]ong', '', input_data)
+#    input_data = re.sub('^[pP]lay', '', input_data)
     print("processing req 2")
     print(input_data)
     choice_val = process.extract(input_data, choices, scorer=fuzz.partial_ratio, limit=1)
