@@ -745,7 +745,8 @@ def makeWebhookResult(data):
 #        "source": "apiai-weather-webhook-sample"
 #    }
     return {
-        "text": data
+        "text": data ,
+        "speech": data
     }
 #    return {
 #        "fulfillmentMessages": [
