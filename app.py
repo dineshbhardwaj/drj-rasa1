@@ -713,6 +713,7 @@ def webhook():
 
 def processRequest(req):
     print("processing req")
+    print(str(input_data))
     input_data = str(req.get("result").get("resolvedQuery"))
     input_data = re.sub('[sS]ong', '', input_data)
     input_data = re.sub('^[pP]lay', '', input_data)
@@ -729,26 +730,14 @@ def processRequest(req):
     return res
 
 
-def makeYqlQuery(req):
-    result = req.get("result")
-    parameters = result.get("parameters")
-    city = parameters.get("geo-city")
-    if city is None:
-        return None
-
-    return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
-
-
 def makeWebhookResult(data):
     # print(json.dumps(item, indent=4))
 
-    speech = "Response is fantastic " 
     print("Response:")
-    print(speech)
 
     return {
         "speech": data,
-        "displayText": speech,
+        "displayText": data,
         # "data": data,
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
