@@ -737,12 +737,16 @@ def makeWebhookResult(data):
 
     print("Response:")
 
+#    return {
+#        "speech": data,
+#        "displayText": "Got the response",
+#        # "data": data,
+#        # "contextOut": [],
+#        "source": "apiai-weather-webhook-sample"
+#    }
     return {
-        "speech": data,
+        "ssml": data,
         "displayText": "Got the response",
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
     }
 
 
