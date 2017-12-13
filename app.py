@@ -735,7 +735,7 @@ def processRequest(req):
 def makeWebhookResult(data):
     # print(json.dumps(item, indent=4))
 
-    print("Response:")
+    print("Response: " + data)
 
 #    return {
 #        "speech": data,
@@ -745,16 +745,19 @@ def makeWebhookResult(data):
 #        "source": "apiai-weather-webhook-sample"
 #    }
     return {
-        "fulfillmentMessages": [
-            {
-                "simpleResponses": {
-                    "textToSpeech": "my response",
-                    "ssml": data,
-                    "displayText": "Got the response",
-                },
-            }
-        ],
+        "text": data
     }
+#    return {
+#        "fulfillmentMessages": [
+#            {
+#                "simpleResponses": {
+#                    "textToSpeech": "my response",
+#                    "ssml": data,
+#                    "displayText": "Got the response",
+#                },
+#            }
+#        ],
+#    }
 
 
 if __name__ == '__main__':
