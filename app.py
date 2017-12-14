@@ -715,8 +715,8 @@ def processRequest(req):
     print("processing req")
     input_data = str(req)
     print(input_data)
-#    input_data = str(req.get("result").get("resolvedQuery"))
-    input_data = str(req.get("queryResult").get("queryText"))
+    input_data = str(req.get("result").get("resolvedQuery"))
+#    input_data = str(req.get("queryResult").get("queryText"))
     input_data = re.sub('[sS]ong', '', input_data)
     input_data = re.sub('^[pP]lay', '', input_data)
     print("processing req 2")
@@ -737,17 +737,17 @@ def makeWebhookResult(data):
 
     print("Response: " + data)
 
-#    return {
-#        "speech": data,
-#        "displayText": "Got the response",
-#        # "data": data,
-#        # "contextOut": [],
-#        "source": "apiai-weather-webhook-sample"
-#    }
     return {
-        "text": data ,
-        "speech": data
+        "speech": data,
+        "displayText": "Got the response",
+        # "data": data,
+        # "contextOut": [],
+        "source": "apiai-weather-webhook-sample"
     }
+#    return {
+#        "text": data ,
+#        "speech": data
+#    }
 #    return {
 #        "fulfillmentMessages": [
 #            {
