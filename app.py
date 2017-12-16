@@ -41,7 +41,7 @@ from rq import Queue
 from worker import conn
 #from utils import next, processRequest, makeWebhookResult
 
-q = Queue(connection=conn)
+
 
 maintain_history = []
 
@@ -59,7 +59,7 @@ CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
-
+    q = Queue(connection=conn)
     print("Request:")
 #    print(json.dumps(req, indent=4))
     res = processRequest(req)
