@@ -2,11 +2,13 @@ import apiai
 import requests
 import time
 
+
 ##DEEPAK
 def next_event(sess_id):
     print(" FINALLY NEXT")
     time.sleep(60)
     print(" FINALLY NEXT + 60")
+    CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
     session_id = sess_id
     print("session id ", session_id)
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
