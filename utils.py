@@ -1,5 +1,5 @@
 ##DEEPAK
-def next(sess_id):
+def next_event(sess_id):
     print(" FINALLY NEXT")
     time.sleep(60)
     print(" FINALLY NEXT + 60")
