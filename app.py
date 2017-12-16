@@ -725,7 +725,7 @@ def webhook():
     print("session id1")
     session_id=str(req.get("sessionId"))
     print("Session id2")
-    next_req = requests.post('https://drj1.herokuapp.com/next/post', data = {'session_id1':'session_id'})
+    next_req = requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':'session_id'})
     return r
 
 
