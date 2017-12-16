@@ -3,3 +3,5 @@ future==0.16.0
 fuzzywuzzy==0.15.1
 apiai==1.2.3
 requests
+redis
+rq

@@ -36,6 +36,10 @@ from flask import make_response
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from song_data import *
+from rq import Queue
+from worker import conn
+
+q = Queue(connection=conn)
 
 maintain_history = []
 
@@ -55,11 +59,8 @@ def webhook():
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
-    
 #    print(json.dumps(req, indent=4))
-
     res = processRequest(req)
-
     res = json.dumps(res, indent=4)
     # print(res)
     r = make_response(res)
@@ -67,8 +68,9 @@ def webhook():
     #if not session_id:
     print("session id1")
     session_id=str(req.get("sessionId"))
-    print("Session id2")
-    #next_req = requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':'session_id'})
+    print("Session id2",session_id)
+    next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
+    #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     return r
 
 
@@ -76,7 +78,8 @@ def webhook():
 @app.route('/next', methods=['POST'])
 def next():
     print(" FINALLY NEXT")
-    #time.sleep(60)
+    time.sleep(60)
+    print(" FINALLY NEXT + 60")
     session_id = request.POST['session_id']
     print("session id ", session_id)
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
