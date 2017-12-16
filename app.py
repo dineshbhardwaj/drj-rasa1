@@ -109,7 +109,7 @@ def processRequest(req):
     print("processing req 3")
     #print(str(choice_val))
     #choice_song_path = map_choices[choice_val[0][0]]
-    choice_song_path = map_choices[0]
+    choice_song_path = map_choices["Tera Mera Pyar Amar"]
     print("processing req 4")
     print(str(choice_song_path))
     data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
