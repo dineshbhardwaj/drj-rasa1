@@ -25,6 +25,10 @@ from urllib.error import HTTPError
 import json
 import os
 import re
+import sys
+import apiai
+import requests
+import time
 
 from flask import Flask
 from flask import request
@@ -33,7 +37,9 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 
-maintain_history = [] 
+maintain_history = []
+
+
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -697,12 +703,22 @@ map_choices =     { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera
                     "Zara Zara" : "https://drj1.000webhostapp.com/Zara_Zara-Rahna_hai_tere_dil_mein_001.mp3" ,
                     "Zulfa - (Ft Dr.Zeus) (RoyalJatt.Com)" : "https://drj1.000webhostapp.com/Zulfa_-__Ft_Dr.Zeus_-Jaz_Dhami-www.Mp3Mad.Com.mp3" }
 
+#DEEPAK CODE FOR EVENT
+CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
+ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
+request = ai.event_request(apiai.events.Event("nextevent"))
+request.lang = 'en'  # optional, default value equal 'en'
+request.session_id = "1513417778542"
+response = request.getresponse()
+#session_id=str(req.get("sessionId"))
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
+    if not session_id:
+        session_id=str(req.get("sessionId"))
 #    print(json.dumps(req, indent=4))
 
     res = processRequest(req)
@@ -711,7 +727,25 @@ def webhook():
     # print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
+    next_req = requests.post('https://drj1.herokuapp.com/next/post', data = {'session_id':'session_id'})
     return r
+
+
+##DEEPAK
+@app.route('/next', methods=['POST'])
+def next():
+    print(" FINALLY NEXT")
+    time.sleep(60)
+    session_id = request.POST['session_id']
+    print("session id ", session_id)
+    ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
+    request = ai.event_request(apiai.events.Event("nextevent"))
+    request.lang = 'en'  # optional, default value equal 'en'
+    request.session_id = session_id
+    response = request.getresponse()
+    print("event response")
+    print(response)    
+
 
 
 def processRequest(req):
@@ -732,6 +766,9 @@ def processRequest(req):
     print(str(choice_song_path))
     data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
     res = makeWebhookResult(data)
+    ###DELAYED SONG
+    
+    ######
     return res
 
 
