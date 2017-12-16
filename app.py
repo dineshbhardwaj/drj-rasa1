@@ -712,8 +712,7 @@ def webhook():
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
-    if not session_id:
-        session_id=str(req.get("sessionId"))
+    
 #    print(json.dumps(req, indent=4))
 
     res = processRequest(req)
@@ -722,7 +721,9 @@ def webhook():
     # print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
-    next_req = requests.post('https://drj1.herokuapp.com/next/post', data = {'session_id':'session_id'})
+    #if not session_id:
+    session_id=str(req.get("sessionId"))
+    next_req = requests.post('https://drj1.herokuapp.com/next/post', data = {'session_id1':'session_id'})
     return r
 
 
