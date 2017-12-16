@@ -705,12 +705,7 @@ map_choices =     { "Tera Mera Pyar Amar" : "https://drj1.000webhostapp.com/tera
 
 #DEEPAK CODE FOR EVENT
 CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
-ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
-request = ai.event_request(apiai.events.Event("nextevent"))
-request.lang = 'en'  # optional, default value equal 'en'
-request.session_id = "1513417778542"
-response = request.getresponse()
-#session_id=str(req.get("sessionId"))
+
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
