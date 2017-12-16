@@ -733,7 +733,7 @@ def webhook():
 @app.route('/next', methods=['POST'])
 def next():
     print(" FINALLY NEXT")
-    time.sleep(60)
+    #time.sleep(60)
     session_id = request.POST['session_id']
     print("session id ", session_id)
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
