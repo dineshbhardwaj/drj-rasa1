@@ -29,7 +29,7 @@ import sys
 import apiai
 import requests
 import time
-import utils
+
 
 from flask import Flask
 from flask import request
@@ -39,6 +39,7 @@ from fuzzywuzzy import process
 from song_data import *
 from rq import Queue
 from worker import conn
+from utils import next, processRequest, makeWebhookResult
 
 q = Queue(connection=conn)
 
@@ -61,17 +62,17 @@ def webhook():
 
     print("Request:")
 #    print(json.dumps(req, indent=4))
-    res = utils.processRequest(req)
+    res = processRequest(req)
     res = json.dumps(res, indent=4)
     # print(res)
-    r = utils.make_response(res)
+    r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     #if not session_id:
     print("session id1")
     session_id=str(req.get("sessionId"))
     print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
-    next_req = q.enqueue(utils.next(session_id))
+    next_req = q.enqueue(next(session_id))
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     #time.sleep(1)
     print("queue working")
