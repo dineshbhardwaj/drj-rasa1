@@ -72,14 +72,14 @@ def webhook():
     session_id=str(req.get("sessionId"))
     print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
-    next_req = q.enqueue(next,session_id)
+    next_req = q.enqueue(next_event,session_id)
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     #time.sleep(1)
     print("queue working")
     return r
 
 ##DEEPAK
-def next(sess_id):
+def next_event(sess_id):
     print(" FINALLY NEXT")
     time.sleep(60)
     print(" FINALLY NEXT + 60")
