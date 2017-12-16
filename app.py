@@ -69,18 +69,19 @@ def webhook():
     print("session id1")
     session_id=str(req.get("sessionId"))
     print("Session id2",session_id)
-    next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
+    #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
+    next_req = q.enqueue(next(session_id))
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     return r
 
 
 ##DEEPAK
-@app.route('/next', methods=['POST'])
-def next():
+##@app.route('/next', methods=['POST'])
+def next(sess_id):
     print(" FINALLY NEXT")
     time.sleep(60)
     print(" FINALLY NEXT + 60")
-    session_id = request.POST['session_id']
+    session_id = sess_id
     print("session id ", session_id)
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
     request = ai.event_request(apiai.events.Event("nextevent"))
