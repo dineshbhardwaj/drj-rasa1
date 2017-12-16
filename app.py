@@ -39,7 +39,8 @@ from fuzzywuzzy import process
 from song_data import *
 from rq import Queue
 from worker import conn
-#from utils import next, processRequest, makeWebhookResult
+
+from utils import next_event
 
 
 
@@ -55,20 +56,6 @@ app = Flask(__name__)
 #DEEPAK CODE FOR EVENT
 CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
 ##DEEPAK
-def next_event(sess_id):
-    print(" FINALLY NEXT")
-    time.sleep(60)
-    print(" FINALLY NEXT + 60")
-    session_id = sess_id
-    print("session id ", session_id)
-    ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
-    request = ai.event_request(apiai.events.Event("nextevent"))
-    request.lang = 'en'  # optional, default value equal 'en'
-    request.session_id = session_id
-    response1 = request.getresponse()
-    print("event response")
-    print(response1)  
-    return response1
 
 
 
