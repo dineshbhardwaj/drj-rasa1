@@ -70,9 +70,9 @@ def webhook():
     session_id=str(req.get("sessionId"))
     print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
-    #next_req = q.enqueue(next(session_id))
+    next_req = q.enqueue(next(session_id))
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
-    time.sleep(1)
+    #time.sleep(1)
     print("queue working")
     return r
 
@@ -105,10 +105,11 @@ def processRequest(req):
     input_data = re.sub('^[pP]lay', '', input_data)
     print("processing req 2")
     print(input_data)
-    choice_val = process.extract(input_data, choices, scorer=fuzz.partial_ratio, limit=1)
+    #choice_val = process.extract(input_data, choices, scorer=fuzz.partial_ratio, limit=1)
     print("processing req 3")
-    print(str(choice_val))
-    choice_song_path = map_choices[choice_val[0][0]]
+    #print(str(choice_val))
+    #choice_song_path = map_choices[choice_val[0][0]]
+    choice_song_path = map_choices[0]
     print("processing req 4")
     print(str(choice_song_path))
     data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
