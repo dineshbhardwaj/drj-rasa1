@@ -75,7 +75,7 @@ def webhook():
     session_id=req.get("sessionId")
     print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
-    if str(req.get("result").get("source")) not contains "agent"
+    if "agent" not in str(req.get("result").get("source"))
         next_req = q.enqueue(next_event,session_id)
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     #time.sleep(1)
