@@ -72,7 +72,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     #if not session_id:
     print("session id1")
-    session_id=str(req.get("sessionId"))
+    session_id=req.get("sessionId")
     print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
     next_req = q.enqueue(next_event,session_id)
