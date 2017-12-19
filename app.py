@@ -107,7 +107,7 @@ def processRequest(req):
     song_num=0
     playlist_songs_paths=[]
     for key in map_choices:
-        if (song_num <= 10):
+        if (song_num < 1):
             song_num = song_num+1
             playlist_songs_paths.append(map_choices[key])
         
