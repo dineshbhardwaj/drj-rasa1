@@ -102,9 +102,26 @@ def processRequest(req):
     print("processing req 4")
     print(str(choice_song_path))
     #data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
-    data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> \
-        <break time=\"3s\"/> \
-        <audio src=\"" + choice_song_path1 + "\"> didn't get your MP3 audio file </audio> </speak>"
+    
+    ###CODE FOR PLAYLIST####
+    song_num=0
+    playlist_songs_paths=[]
+    for key in map_choices:
+        if (song_num <= 10):
+            song_num = song_num+1
+            playlist_songs_paths.append(map_choices[key])
+        
+    data="<speak>"
+    for song_path in playlist_songs_paths:
+        data = data + "<audio src=\"" + song_path + "\"> didn't get your MP3 audio file </audio> <break time=\"2s\"/> "
+    data="</speak>"
+    ############################################
+    
+    ##CODE FOR SINGLE SONG###########################################
+    #data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> \
+    #    <break time=\"3s\"/> \
+    #    <audio src=\"" + choice_song_path1 + "\"> didn't get your MP3 audio file </audio> </speak>"
+    ########################################
     res = makeWebhookResult(data)
     return res
 
