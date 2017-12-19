@@ -45,7 +45,7 @@ from utils import next_event
 
 
 maintain_history = []
-max_song_num=3
+max_song_num=5
 
 
 
