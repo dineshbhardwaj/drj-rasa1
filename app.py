@@ -103,9 +103,9 @@ def processRequest(req):
     print(str(choice_song_path))
     #data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
     data = "<speak> 
-        <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> 
+        <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio>. 
         #<break time="3s"/> 
-        <audio src=\"" + choice_song_path1 + "\"> didn't get your MP3 audio file </audio>  
+        #<audio src=\"" + choice_song_path1 + "\"> didn't get your MP3 audio file </audio>  
         </speak>"
     res = makeWebhookResult(data)
     return res
