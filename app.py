@@ -45,6 +45,7 @@ from utils import next_event
 
 
 maintain_history = []
+max_song_num=3
 
 
 
@@ -107,7 +108,7 @@ def processRequest(req):
     song_num=0
     playlist_songs_paths=[]
     for key in map_choices:
-        if (song_num < 1):
+        if (song_num < max_song_num):
             song_num = song_num+1
             playlist_songs_paths.append(map_choices[key])
         
