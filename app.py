@@ -114,7 +114,7 @@ def processRequest(req):
     data="<speak>"
     for song_path in playlist_songs_paths:
         data = data + "<audio src=\"" + song_path + "\"> didn't get your MP3 audio file </audio> <break time=\"2s\"/> "
-    data="</speak>"
+    data= data + "</speak>"
     ############################################
     
     ##CODE FOR SINGLE SONG###########################################
