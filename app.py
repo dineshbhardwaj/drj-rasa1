@@ -46,6 +46,9 @@ from utils import next_event
 from spacy import load
 import en_core_web_sm
 
+sputnik.install('spacy', spacy.about.version, 'en_default')
+
+
 
 
 maintain_history = []
