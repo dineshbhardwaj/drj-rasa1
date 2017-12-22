@@ -5,5 +5,5 @@ apiai==1.2.3
 requests
 redis
 rq
-rasa-core=0.7.9
-rasa-nlu=0.10.5
+rasa-core==0.7.9
+rasa-nlu==0.10.5
