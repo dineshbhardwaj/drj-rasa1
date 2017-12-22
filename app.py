@@ -43,6 +43,9 @@ from rasa_nlu_prog import *
 
 from utils import next_event
 
+from spacy import load
+import en_core_web_sm
+
 
 
 maintain_history = []
