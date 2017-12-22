@@ -7,3 +7,6 @@ redis
 rq
 rasa-core==0.7.9
 rasa-nlu==0.10.5
+spacy
+sklearn_crfsuite
+sklearn
