@@ -10,3 +10,4 @@ rasa-nlu==0.10.5
 spacy-nightly
 sklearn_crfsuite
 sklearn
+-e https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
