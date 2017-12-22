@@ -1,0 +1,24 @@
+{
+  "features": [
+    "intent_greet", 
+    "intent_bill_plan_change", 
+    "intent_get_phone_number", 
+    "intent_no_request_num", 
+    "intent_customer_num", 
+    "intent_affermation", 
+    "intent_sure_thanks", 
+    "entity_phone_num", 
+    "entity_cus_name", 
+    "slot_cus_name_0", 
+    "slot_phone_num_0", 
+    "prev_action_listen", 
+    "prev_action_restart", 
+    "prev_utter_ask_howcanhelp", 
+    "prev_utter_give_mobile_number", 
+    "prev_utter_give_request_num", 
+    "prev_utter_give_customer_num", 
+    "prev_utter_change_request_specification", 
+    "prev_giving_date_for_change", 
+    "prev_utter_ask_any_other_help"
+  ]
+}

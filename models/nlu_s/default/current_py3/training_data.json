@@ -1,0 +1,4462 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 11,
+            "end": 23
+          }
+        ],
+        "text": "play music by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 11,
+            "end": 26
+          }
+        ],
+        "text": "play music by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 11,
+            "end": 25
+          }
+        ],
+        "text": "play music by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 11,
+            "end": 26
+          }
+        ],
+        "text": "play music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 11,
+            "end": 29
+          }
+        ],
+        "text": "play music by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 11,
+            "end": 25
+          }
+        ],
+        "text": "play music by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 11,
+            "end": 43
+          }
+        ],
+        "text": "play music by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 11,
+            "end": 27
+          }
+        ],
+        "text": "play music by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 11,
+            "end": 26
+          }
+        ],
+        "text": "play music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 11,
+            "end": 23
+          }
+        ],
+        "text": "play music by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 28,
+            "end": 40
+          }
+        ],
+        "text": "could you please play music by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 28,
+            "end": 43
+          }
+        ],
+        "text": "could you please play music by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 28,
+            "end": 42
+          }
+        ],
+        "text": "could you please play music by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 28,
+            "end": 43
+          }
+        ],
+        "text": "could you please play music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 28,
+            "end": 46
+          }
+        ],
+        "text": "could you please play music by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 28,
+            "end": 42
+          }
+        ],
+        "text": "could you please play music by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 28,
+            "end": 60
+          }
+        ],
+        "text": "could you please play music by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 28,
+            "end": 44
+          }
+        ],
+        "text": "could you please play music by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 28,
+            "end": 43
+          }
+        ],
+        "text": "could you please play music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 28,
+            "end": 40
+          }
+        ],
+        "text": "could you please play music by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 10,
+            "end": 22
+          }
+        ],
+        "text": "play song by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 10,
+            "end": 25
+          }
+        ],
+        "text": "play song by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 10,
+            "end": 24
+          }
+        ],
+        "text": "play song by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 10,
+            "end": 25
+          }
+        ],
+        "text": "play song by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 10,
+            "end": 28
+          }
+        ],
+        "text": "play song by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 10,
+            "end": 24
+          }
+        ],
+        "text": "play song by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 10,
+            "end": 42
+          }
+        ],
+        "text": "play song by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 10,
+            "end": 26
+          }
+        ],
+        "text": "play song by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 10,
+            "end": 25
+          }
+        ],
+        "text": "play song by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 10,
+            "end": 22
+          }
+        ],
+        "text": "play song by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 24,
+            "end": 36
+          }
+        ],
+        "text": "need to hear some music by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 24,
+            "end": 39
+          }
+        ],
+        "text": "need to hear some music by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 24,
+            "end": 38
+          }
+        ],
+        "text": "need to hear some music by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 24,
+            "end": 39
+          }
+        ],
+        "text": "need to hear some music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 24,
+            "end": 42
+          }
+        ],
+        "text": "need to hear some music by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 24,
+            "end": 38
+          }
+        ],
+        "text": "need to hear some music by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 24,
+            "end": 56
+          }
+        ],
+        "text": "need to hear some music by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 24,
+            "end": 40
+          }
+        ],
+        "text": "need to hear some music by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 24,
+            "end": 39
+          }
+        ],
+        "text": "need to hear some music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 24,
+            "end": 36
+          }
+        ],
+        "text": "need to hear some music by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 19,
+            "end": 31
+          }
+        ],
+        "text": "wanna listen songs by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 19,
+            "end": 34
+          }
+        ],
+        "text": "wanna listen songs by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 19,
+            "end": 33
+          }
+        ],
+        "text": "wanna listen songs by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 19,
+            "end": 34
+          }
+        ],
+        "text": "wanna listen songs by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 19,
+            "end": 37
+          }
+        ],
+        "text": "wanna listen songs by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 19,
+            "end": 33
+          }
+        ],
+        "text": "wanna listen songs by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 19,
+            "end": 51
+          }
+        ],
+        "text": "wanna listen songs by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 19,
+            "end": 35
+          }
+        ],
+        "text": "wanna listen songs by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 19,
+            "end": 34
+          }
+        ],
+        "text": "wanna listen songs by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 19,
+            "end": 31
+          }
+        ],
+        "text": "wanna listen songs by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 23,
+            "end": 35
+          }
+        ],
+        "text": "get me some nice music by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 23,
+            "end": 38
+          }
+        ],
+        "text": "get me some nice music by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 23,
+            "end": 37
+          }
+        ],
+        "text": "get me some nice music by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 23,
+            "end": 38
+          }
+        ],
+        "text": "get me some nice music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 23,
+            "end": 41
+          }
+        ],
+        "text": "get me some nice music by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 23,
+            "end": 37
+          }
+        ],
+        "text": "get me some nice music by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 23,
+            "end": 55
+          }
+        ],
+        "text": "get me some nice music by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 23,
+            "end": 39
+          }
+        ],
+        "text": "get me some nice music by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 23,
+            "end": 38
+          }
+        ],
+        "text": "get me some nice music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 23,
+            "end": 35
+          }
+        ],
+        "text": "get me some nice music by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 34,
+            "end": 46
+          }
+        ],
+        "text": "need to listen to some nice music by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 34,
+            "end": 49
+          }
+        ],
+        "text": "need to listen to some nice music by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 34,
+            "end": 48
+          }
+        ],
+        "text": "need to listen to some nice music by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 34,
+            "end": 49
+          }
+        ],
+        "text": "need to listen to some nice music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 34,
+            "end": 52
+          }
+        ],
+        "text": "need to listen to some nice music by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 34,
+            "end": 48
+          }
+        ],
+        "text": "need to listen to some nice music by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 34,
+            "end": 66
+          }
+        ],
+        "text": "need to listen to some nice music by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 34,
+            "end": 50
+          }
+        ],
+        "text": "need to listen to some nice music by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 34,
+            "end": 49
+          }
+        ],
+        "text": "need to listen to some nice music by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 34,
+            "end": 46
+          }
+        ],
+        "text": "need to listen to some nice music by manna dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Manna Dey",
+            "start": 36,
+            "end": 48
+          }
+        ],
+        "text": "please help me find some good songs by Manna Dey "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Jagjit singh",
+            "start": 36,
+            "end": 51
+          }
+        ],
+        "text": "please help me find some good songs by Jagjit singh "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Arman Malik",
+            "start": 36,
+            "end": 50
+          }
+        ],
+        "text": "please help me find some good songs by Arman Malik "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 36,
+            "end": 51
+          }
+        ],
+        "text": "please help me find some good songs by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by lata Mangeshkar",
+            "start": 36,
+            "end": 54
+          }
+        ],
+        "text": "please help me find some good songs by lata Mangeshkar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Asha bhosle",
+            "start": 36,
+            "end": 50
+          }
+        ],
+        "text": "please help me find some good songs by Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar and Asha bhosle",
+            "start": 36,
+            "end": 68
+          }
+        ],
+        "text": "please help me find some good songs by Kishore kumar and Asha bhosle "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by Kishore kumar",
+            "start": 36,
+            "end": 52
+          }
+        ],
+        "text": "please help me find some good songs by Kishore kumar "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by jakir husain",
+            "start": 36,
+            "end": 51
+          }
+        ],
+        "text": "please help me find some good songs by jakir husain "
+      },
+      {
+        "intent": "singer_by_name",
+        "entities": [
+          {
+            "entity": "singer_name",
+            "value": "by manna dey",
+            "start": 36,
+            "end": 48
+          }
+        ],
+        "text": "please help me find some good songs by manna dey "
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 10,
+            "end": 38
+          }
+        ],
+        "text": "play song raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 10,
+            "end": 36
+          }
+        ],
+        "text": "play song hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 10,
+            "end": 43
+          }
+        ],
+        "text": "play song humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 10,
+            "end": 28
+          }
+        ],
+        "text": "play song he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 10,
+            "end": 34
+          }
+        ],
+        "text": "play song dil to aakhir dil hai na"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 11,
+            "end": 39
+          }
+        ],
+        "text": "play music raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 11,
+            "end": 37
+          }
+        ],
+        "text": "play music hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 11,
+            "end": 44
+          }
+        ],
+        "text": "play music humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 11,
+            "end": 29
+          }
+        ],
+        "text": "play music he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 11,
+            "end": 35
+          }
+        ],
+        "text": "play music dil to aakhir dil hai na"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 5,
+            "end": 33
+          }
+        ],
+        "text": "play raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 5,
+            "end": 31
+          }
+        ],
+        "text": "play hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 5,
+            "end": 38
+          }
+        ],
+        "text": "play humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 5,
+            "end": 23
+          }
+        ],
+        "text": "play he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 5,
+            "end": 29
+          }
+        ],
+        "text": "play dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 5,
+            "end": 31
+          }
+        ],
+        "text": "play hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 5,
+            "end": 38
+          }
+        ],
+        "text": "play humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 5,
+            "end": 23
+          }
+        ],
+        "text": "play he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 5,
+            "end": 29
+          }
+        ],
+        "text": "play dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 13,
+            "end": 41
+          }
+        ],
+        "text": "wanna listen raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 13,
+            "end": 39
+          }
+        ],
+        "text": "wanna listen hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 13,
+            "end": 46
+          }
+        ],
+        "text": "wanna listen humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 13,
+            "end": 31
+          }
+        ],
+        "text": "wanna listen he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 13,
+            "end": 37
+          }
+        ],
+        "text": "wanna listen dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 13,
+            "end": 39
+          }
+        ],
+        "text": "wanna listen hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 13,
+            "end": 46
+          }
+        ],
+        "text": "wanna listen humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 13,
+            "end": 31
+          }
+        ],
+        "text": "wanna listen he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 13,
+            "end": 37
+          }
+        ],
+        "text": "wanna listen dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 17,
+            "end": 45
+          }
+        ],
+        "text": "play me the song raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 17,
+            "end": 43
+          }
+        ],
+        "text": "play me the song hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 17,
+            "end": 50
+          }
+        ],
+        "text": "play me the song humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 17,
+            "end": 35
+          }
+        ],
+        "text": "play me the song he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 17,
+            "end": 41
+          }
+        ],
+        "text": "play me the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 17,
+            "end": 43
+          }
+        ],
+        "text": "play me the song hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 17,
+            "end": 50
+          }
+        ],
+        "text": "play me the song humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 17,
+            "end": 35
+          }
+        ],
+        "text": "play me the song he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 17,
+            "end": 41
+          }
+        ],
+        "text": "play me the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 16,
+            "end": 44
+          }
+        ],
+        "text": "get me the song raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 16,
+            "end": 42
+          }
+        ],
+        "text": "get me the song hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 16,
+            "end": 49
+          }
+        ],
+        "text": "get me the song humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 16,
+            "end": 34
+          }
+        ],
+        "text": "get me the song he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 16,
+            "end": 40
+          }
+        ],
+        "text": "get me the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 16,
+            "end": 42
+          }
+        ],
+        "text": "get me the song hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 16,
+            "end": 49
+          }
+        ],
+        "text": "get me the song humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 16,
+            "end": 34
+          }
+        ],
+        "text": "get me the song he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 16,
+            "end": 40
+          }
+        ],
+        "text": "get me the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 22,
+            "end": 50
+          }
+        ],
+        "text": "help me find the song raja ko rani se pyar ho gaya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 22,
+            "end": 48
+          }
+        ],
+        "text": "help me find the song hum tumhe chahte hai jitna"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 22,
+            "end": 55
+          }
+        ],
+        "text": "help me find the song humne tumko chaha tumse pyar kiya"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 22,
+            "end": 40
+          }
+        ],
+        "text": "help me find the song he rama ye kya hua"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 22,
+            "end": 46
+          }
+        ],
+        "text": "help me find the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 22,
+            "end": 48
+          }
+        ],
+        "text": "help me find the song hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 22,
+            "end": 55
+          }
+        ],
+        "text": "help me find the song humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 22,
+            "end": 40
+          }
+        ],
+        "text": "help me find the song he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 22,
+            "end": 46
+          }
+        ],
+        "text": "help me find the song dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "raja ko rani se pyar ho gaya",
+            "start": 11,
+            "end": 39
+          }
+        ],
+        "text": "nice music raja ko rani se pyar ho gaya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 11,
+            "end": 37
+          }
+        ],
+        "text": "nice music hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 11,
+            "end": 44
+          }
+        ],
+        "text": "nice music humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 11,
+            "end": 29
+          }
+        ],
+        "text": "nice music he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 11,
+            "end": 35
+          }
+        ],
+        "text": "nice music dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "hum tumhe chahte hai jitna",
+            "start": 11,
+            "end": 37
+          }
+        ],
+        "text": "nice music hum tumhe chahte hai jitna song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "humne tumko chaha tumse pyar kiya",
+            "start": 11,
+            "end": 44
+          }
+        ],
+        "text": "nice music humne tumko chaha tumse pyar kiya song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "he rama ye kya hua",
+            "start": 11,
+            "end": 29
+          }
+        ],
+        "text": "nice music he rama ye kya hua song"
+      },
+      {
+        "intent": "play_song_with_song_name",
+        "entities": [
+          {
+            "entity": "song_name",
+            "value": "dil to aakhir dil hai na",
+            "start": 11,
+            "end": 35
+          }
+        ],
+        "text": "nice music dil to aakhir dil hai na song"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 11,
+            "end": 45
+          }
+        ],
+        "text": "play music from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 11,
+            "end": 22
+          }
+        ],
+        "text": "play music from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 11,
+            "end": 44
+          }
+        ],
+        "text": "play music from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 11,
+            "end": 37
+          }
+        ],
+        "text": "play music from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 11,
+            "end": 33
+          }
+        ],
+        "text": "play music from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 11,
+            "end": 23
+          }
+        ],
+        "text": "play music from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 11,
+            "end": 19
+          }
+        ],
+        "text": "play music from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 11,
+            "end": 25
+          }
+        ],
+        "text": "play music from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 11,
+            "end": 33
+          }
+        ],
+        "text": "play music from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 11,
+            "end": 32
+          }
+        ],
+        "text": "play music from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 11,
+            "end": 40
+          }
+        ],
+        "text": "play music from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 11,
+            "end": 22
+          }
+        ],
+        "text": "play music from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 11,
+            "end": 22
+          }
+        ],
+        "text": "play music from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 11,
+            "end": 36
+          }
+        ],
+        "text": "play music from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 11,
+            "end": 21
+          }
+        ],
+        "text": "play music from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 18,
+            "end": 52
+          }
+        ],
+        "text": "get me some music from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 18,
+            "end": 29
+          }
+        ],
+        "text": "get me some music from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 18,
+            "end": 51
+          }
+        ],
+        "text": "get me some music from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 18,
+            "end": 44
+          }
+        ],
+        "text": "get me some music from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 18,
+            "end": 40
+          }
+        ],
+        "text": "get me some music from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 18,
+            "end": 30
+          }
+        ],
+        "text": "get me some music from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 18,
+            "end": 26
+          }
+        ],
+        "text": "get me some music from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 18,
+            "end": 32
+          }
+        ],
+        "text": "get me some music from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 18,
+            "end": 40
+          }
+        ],
+        "text": "get me some music from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 18,
+            "end": 39
+          }
+        ],
+        "text": "get me some music from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 18,
+            "end": 47
+          }
+        ],
+        "text": "get me some music from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 18,
+            "end": 29
+          }
+        ],
+        "text": "get me some music from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 18,
+            "end": 29
+          }
+        ],
+        "text": "get me some music from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 18,
+            "end": 43
+          }
+        ],
+        "text": "get me some music from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 18,
+            "end": 28
+          }
+        ],
+        "text": "get me some music from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 27,
+            "end": 61
+          }
+        ],
+        "text": "can you play me some songs from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "text": "can you play me some songs from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 27,
+            "end": 60
+          }
+        ],
+        "text": "can you play me some songs from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 27,
+            "end": 53
+          }
+        ],
+        "text": "can you play me some songs from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 27,
+            "end": 49
+          }
+        ],
+        "text": "can you play me some songs from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 27,
+            "end": 39
+          }
+        ],
+        "text": "can you play me some songs from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 27,
+            "end": 35
+          }
+        ],
+        "text": "can you play me some songs from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 27,
+            "end": 41
+          }
+        ],
+        "text": "can you play me some songs from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 27,
+            "end": 49
+          }
+        ],
+        "text": "can you play me some songs from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 27,
+            "end": 48
+          }
+        ],
+        "text": "can you play me some songs from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 27,
+            "end": 56
+          }
+        ],
+        "text": "can you play me some songs from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "text": "can you play me some songs from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "text": "can you play me some songs from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 27,
+            "end": 52
+          }
+        ],
+        "text": "can you play me some songs from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 27,
+            "end": 37
+          }
+        ],
+        "text": "can you play me some songs from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 26,
+            "end": 60
+          }
+        ],
+        "text": "need to listen some songs from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 26,
+            "end": 37
+          }
+        ],
+        "text": "need to listen some songs from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 26,
+            "end": 59
+          }
+        ],
+        "text": "need to listen some songs from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 26,
+            "end": 52
+          }
+        ],
+        "text": "need to listen some songs from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 26,
+            "end": 48
+          }
+        ],
+        "text": "need to listen some songs from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 26,
+            "end": 38
+          }
+        ],
+        "text": "need to listen some songs from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 26,
+            "end": 34
+          }
+        ],
+        "text": "need to listen some songs from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 26,
+            "end": 40
+          }
+        ],
+        "text": "need to listen some songs from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 26,
+            "end": 48
+          }
+        ],
+        "text": "need to listen some songs from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 26,
+            "end": 47
+          }
+        ],
+        "text": "need to listen some songs from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 26,
+            "end": 55
+          }
+        ],
+        "text": "need to listen some songs from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 26,
+            "end": 37
+          }
+        ],
+        "text": "need to listen some songs from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 26,
+            "end": 37
+          }
+        ],
+        "text": "need to listen some songs from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 26,
+            "end": 51
+          }
+        ],
+        "text": "need to listen some songs from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 26,
+            "end": 36
+          }
+        ],
+        "text": "need to listen some songs from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 15,
+            "end": 49
+          }
+        ],
+        "text": "any good music from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 15,
+            "end": 26
+          }
+        ],
+        "text": "any good music from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 15,
+            "end": 48
+          }
+        ],
+        "text": "any good music from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 15,
+            "end": 41
+          }
+        ],
+        "text": "any good music from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 15,
+            "end": 37
+          }
+        ],
+        "text": "any good music from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 15,
+            "end": 27
+          }
+        ],
+        "text": "any good music from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 15,
+            "end": 23
+          }
+        ],
+        "text": "any good music from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 15,
+            "end": 29
+          }
+        ],
+        "text": "any good music from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 15,
+            "end": 37
+          }
+        ],
+        "text": "any good music from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 15,
+            "end": 36
+          }
+        ],
+        "text": "any good music from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 15,
+            "end": 44
+          }
+        ],
+        "text": "any good music from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 15,
+            "end": 26
+          }
+        ],
+        "text": "any good music from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 15,
+            "end": 26
+          }
+        ],
+        "text": "any good music from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 15,
+            "end": 40
+          }
+        ],
+        "text": "any good music from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 15,
+            "end": 25
+          }
+        ],
+        "text": "any good music from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 31,
+            "end": 65
+          }
+        ],
+        "text": "can you get me some good songs from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 31,
+            "end": 42
+          }
+        ],
+        "text": "can you get me some good songs from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 31,
+            "end": 64
+          }
+        ],
+        "text": "can you get me some good songs from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 31,
+            "end": 57
+          }
+        ],
+        "text": "can you get me some good songs from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 31,
+            "end": 53
+          }
+        ],
+        "text": "can you get me some good songs from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 31,
+            "end": 43
+          }
+        ],
+        "text": "can you get me some good songs from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 31,
+            "end": 39
+          }
+        ],
+        "text": "can you get me some good songs from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 31,
+            "end": 45
+          }
+        ],
+        "text": "can you get me some good songs from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 31,
+            "end": 53
+          }
+        ],
+        "text": "can you get me some good songs from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 31,
+            "end": 52
+          }
+        ],
+        "text": "can you get me some good songs from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 31,
+            "end": 60
+          }
+        ],
+        "text": "can you get me some good songs from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 31,
+            "end": 42
+          }
+        ],
+        "text": "can you get me some good songs from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 31,
+            "end": 42
+          }
+        ],
+        "text": "can you get me some good songs from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 31,
+            "end": 56
+          }
+        ],
+        "text": "can you get me some good songs from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 31,
+            "end": 41
+          }
+        ],
+        "text": "can you get me some good songs from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 6,
+            "end": 40
+          }
+        ],
+        "text": "music from dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 6,
+            "end": 17
+          }
+        ],
+        "text": "music from dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 6,
+            "end": 39
+          }
+        ],
+        "text": "music from ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 6,
+            "end": 32
+          }
+        ],
+        "text": "music from hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 6,
+            "end": 28
+          }
+        ],
+        "text": "music from dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 6,
+            "end": 18
+          }
+        ],
+        "text": "music from dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 6,
+            "end": 14
+          }
+        ],
+        "text": "music from Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 6,
+            "end": 20
+          }
+        ],
+        "text": "music from jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 6,
+            "end": 28
+          }
+        ],
+        "text": "music from nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 6,
+            "end": 27
+          }
+        ],
+        "text": "music from dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 6,
+            "end": 35
+          }
+        ],
+        "text": "music from jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 6,
+            "end": 17
+          }
+        ],
+        "text": "music from Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 6,
+            "end": 17
+          }
+        ],
+        "text": "music from raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 6,
+            "end": 31
+          }
+        ],
+        "text": "music from ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 6,
+            "end": 16
+          }
+        ],
+        "text": "music from dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dilwale dulhaniya le jaayenge",
+            "start": 18,
+            "end": 58
+          }
+        ],
+        "text": "play me the music from movie dilwale dulhaniya le jaayenge "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dil se",
+            "start": 18,
+            "end": 35
+          }
+        ],
+        "text": "play me the music from movie dil se "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie ram teri ganga maili ho gayi",
+            "start": 18,
+            "end": 57
+          }
+        ],
+        "text": "play me the music from movie ram teri ganga maili ho gayi "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie hum tumhare hai sanam",
+            "start": 18,
+            "end": 50
+          }
+        ],
+        "text": "play me the music from movie hum tumhare hai sanam "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dariya ke us paar",
+            "start": 18,
+            "end": 46
+          }
+        ],
+        "text": "play me the music from movie dariya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dharkan",
+            "start": 18,
+            "end": 36
+          }
+        ],
+        "text": "play me the music from movie dharkan "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie Dil",
+            "start": 18,
+            "end": 32
+          }
+        ],
+        "text": "play me the music from movie Dil "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie jaanashin",
+            "start": 18,
+            "end": 38
+          }
+        ],
+        "text": "play me the music from movie jaanashin "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie nadiya ke us paar",
+            "start": 18,
+            "end": 46
+          }
+        ],
+        "text": "play me the music from movie nadiya ke us paar "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dunahon ka devta",
+            "start": 18,
+            "end": 45
+          }
+        ],
+        "text": "play me the music from movie dunahon ka devta "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie jaisi karni waisi bharni",
+            "start": 18,
+            "end": 53
+          }
+        ],
+        "text": "play me the music from movie jaisi karni waisi bharni "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie Rajaji",
+            "start": 18,
+            "end": 35
+          }
+        ],
+        "text": "play me the music from movie Rajaji "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie raaz 2",
+            "start": 18,
+            "end": 35
+          }
+        ],
+        "text": "play me the music from movie raaz 2 "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie ramaiya vasta maiyaa",
+            "start": 18,
+            "end": 49
+          }
+        ],
+        "text": "play me the music from movie ramaiya vasta maiyaa "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from movie dundh",
+            "start": 18,
+            "end": 34
+          }
+        ],
+        "text": "play me the music from movie dundh "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 19,
+            "end": 53
+          }
+        ],
+        "text": "need to have songs from dilwale dulhaniya le jaayenge movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from dil se movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 19,
+            "end": 52
+          }
+        ],
+        "text": "need to have songs from ram teri ganga maili ho gayi movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 19,
+            "end": 45
+          }
+        ],
+        "text": "need to have songs from hum tumhare hai sanam movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 19,
+            "end": 41
+          }
+        ],
+        "text": "need to have songs from dariya ke us paar movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 19,
+            "end": 31
+          }
+        ],
+        "text": "need to have songs from dharkan movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 19,
+            "end": 27
+          }
+        ],
+        "text": "need to have songs from Dil movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 19,
+            "end": 33
+          }
+        ],
+        "text": "need to have songs from jaanashin movie "
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 19,
+            "end": 41
+          }
+        ],
+        "text": "need to have songs from nadiya ke us paar movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 19,
+            "end": 40
+          }
+        ],
+        "text": "need to have songs from dunahon ka devta movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 19,
+            "end": 48
+          }
+        ],
+        "text": "need to have songs from jaisi karni waisi bharni movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from Rajaji movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from raaz 2 movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 19,
+            "end": 44
+          }
+        ],
+        "text": "need to have songs from ramaiya vasta maiyaa movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 19,
+            "end": 29
+          }
+        ],
+        "text": "need to have songs from dundh movie"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dilwale dulhaniya le jaayenge",
+            "start": 19,
+            "end": 53
+          }
+        ],
+        "text": "need to have songs from dilwale dulhaniya le jaayenge album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dil se",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from dil se album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ram teri ganga maili ho gayi",
+            "start": 19,
+            "end": 52
+          }
+        ],
+        "text": "need to have songs from ram teri ganga maili ho gayi album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from hum tumhare hai sanam",
+            "start": 19,
+            "end": 45
+          }
+        ],
+        "text": "need to have songs from hum tumhare hai sanam album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dariya ke us paar",
+            "start": 19,
+            "end": 41
+          }
+        ],
+        "text": "need to have songs from dariya ke us paar album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dharkan",
+            "start": 19,
+            "end": 31
+          }
+        ],
+        "text": "need to have songs from dharkan album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Dil",
+            "start": 19,
+            "end": 27
+          }
+        ],
+        "text": "need to have songs from Dil album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaanashin",
+            "start": 19,
+            "end": 33
+          }
+        ],
+        "text": "need to have songs from jaanashin album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from nadiya ke us paar",
+            "start": 19,
+            "end": 41
+          }
+        ],
+        "text": "need to have songs from nadiya ke us paar album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dunahon ka devta",
+            "start": 19,
+            "end": 40
+          }
+        ],
+        "text": "need to have songs from dunahon ka devta album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from jaisi karni waisi bharni",
+            "start": 19,
+            "end": 48
+          }
+        ],
+        "text": "need to have songs from jaisi karni waisi bharni album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from Rajaji",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from Rajaji album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from raaz 2",
+            "start": 19,
+            "end": 30
+          }
+        ],
+        "text": "need to have songs from raaz 2 album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from ramaiya vasta maiyaa",
+            "start": 19,
+            "end": 44
+          }
+        ],
+        "text": "need to have songs from ramaiya vasta maiyaa album"
+      },
+      {
+        "intent": "play_from_album",
+        "entities": [
+          {
+            "entity": "album_name",
+            "value": "from dundh",
+            "start": 19,
+            "end": 29
+          }
+        ],
+        "text": "need to have songs from dundh album"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          }
+        ],
+        "text": "play some prank call "
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Mirchi Murga",
+            "start": 21,
+            "end": 36
+          }
+        ],
+        "text": "play some prank call by Mirchi Murga"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Red FM",
+            "start": 21,
+            "end": 30
+          }
+        ],
+        "text": "play some prank call by Red FM"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Mirchi Murga",
+            "start": 21,
+            "end": 36
+          }
+        ],
+        "text": "play some prank call by Mirchi Murga"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Red FM",
+            "start": 21,
+            "end": 30
+          }
+        ],
+        "text": "play some prank call by Red FM"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Bhaiya ji",
+            "start": 21,
+            "end": 33
+          }
+        ],
+        "text": "play some prank call by Bhaiya ji"
+      },
+      {
+        "intent": "play_by_prank_call",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some prank call",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Bhaiya ji",
+            "start": 21,
+            "end": 33
+          }
+        ],
+        "text": "play some prank call by Bhaiya ji"
+      },
+      {
+        "intent": "play_by_standup_comedian",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some standup comedy",
+            "start": 5,
+            "end": 24
+          }
+        ],
+        "text": "play some standup comedy "
+      },
+      {
+        "intent": "play_by_standup_comedian",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some standup comedy",
+            "start": 5,
+            "end": 24
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by kapil sharma",
+            "start": 25,
+            "end": 40
+          }
+        ],
+        "text": "play some standup comedy by kapil sharma"
+      },
+      {
+        "intent": "play_by_standup_comedian",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some standup comedy",
+            "start": 5,
+            "end": 24
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by sunil grover",
+            "start": 25,
+            "end": 40
+          }
+        ],
+        "text": "play some standup comedy by sunil grover"
+      },
+      {
+        "intent": "play_by_standup_comedian",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some standup comedy",
+            "start": 5,
+            "end": 24
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by sunil pal",
+            "start": 25,
+            "end": 37
+          }
+        ],
+        "text": "play some standup comedy by sunil pal"
+      },
+      {
+        "intent": "play_by_standup_comedian",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "some standup comedy",
+            "start": 5,
+            "end": 24
+          },
+          {
+            "entity": "pank_caller",
+            "value": "by Bhagvat mann",
+            "start": 25,
+            "end": 40
+          }
+        ],
+        "text": "play some standup comedy by Bhagvat mann"
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "haryanavi",
+            "start": 10,
+            "end": 19
+          },
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 20,
+            "end": 25
+          }
+        ],
+        "text": "play some haryanavi jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "punjabi",
+            "start": 10,
+            "end": 17
+          },
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 18,
+            "end": 23
+          }
+        ],
+        "text": "play some punjabi jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "policemen",
+            "start": 10,
+            "end": 19
+          },
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 20,
+            "end": 25
+          }
+        ],
+        "text": "play some policemen jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "wife",
+            "start": 10,
+            "end": 14
+          },
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 15,
+            "end": 20
+          }
+        ],
+        "text": "play some wife jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "sardar",
+            "start": 10,
+            "end": 16
+          },
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 17,
+            "end": 22
+          }
+        ],
+        "text": "play some sardar jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 16,
+            "end": 21
+          }
+        ],
+        "text": "play some funny jokes "
+      },
+      {
+        "intent": "play_some_jokes",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "jokes",
+            "start": 10,
+            "end": 15
+          }
+        ],
+        "text": "play some jokes "
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "hindi",
+            "start": 10,
+            "end": 15
+          },
+          {
+            "entity": "genre_name",
+            "value": "movie review",
+            "start": 16,
+            "end": 28
+          }
+        ],
+        "text": "play some hindi movie review "
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "clas",
+            "value": "english",
+            "start": 10,
+            "end": 17
+          },
+          {
+            "entity": "genre_name",
+            "value": "movie review",
+            "start": 18,
+            "end": 30
+          }
+        ],
+        "text": "play some english movie review "
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "movie review",
+            "start": 5,
+            "end": 17
+          },
+          {
+            "entity": "album_name",
+            "value": "fukre 2",
+            "start": 21,
+            "end": 28
+          }
+        ],
+        "text": "play movie review of fukre 2"
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "movie review",
+            "start": 5,
+            "end": 17
+          },
+          {
+            "entity": "album_name",
+            "value": "robot 2",
+            "start": 21,
+            "end": 28
+          }
+        ],
+        "text": "play movie review of robot 2"
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "movie review",
+            "start": 5,
+            "end": 17
+          },
+          {
+            "entity": "album_name",
+            "value": "firangi",
+            "start": 21,
+            "end": 28
+          }
+        ],
+        "text": "play movie review of firangi "
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "review",
+            "start": 5,
+            "end": 11
+          },
+          {
+            "entity": "album_name",
+            "value": "tera intejaar karungi",
+            "start": 15,
+            "end": 36
+          }
+        ],
+        "text": "play review of tera intejaar karungi"
+      },
+      {
+        "intent": "play_some_movie_review",
+        "entities": [
+          {
+            "entity": "genre_name",
+            "value": "review",
+            "start": 10,
+            "end": 16
+          }
+        ],
+        "text": "play some review "
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "text": "next"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "skip",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "text": "skip"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 6,
+            "end": 10
+          }
+        ],
+        "text": "go to next one"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "text": "play next song"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "text": "play next item"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 6,
+            "end": 10
+          }
+        ],
+        "text": "go to next item"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 6,
+            "end": 10
+          }
+        ],
+        "text": "go to next music"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "text": "switch to next"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 8,
+            "end": 12
+          }
+        ],
+        "text": "move to next"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "text": "next one"
+      },
+      {
+        "intent": "next",
+        "entities": [
+          {
+            "entity": "skip",
+            "value": "next",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "text": "next please"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "text": "repeat that"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "text": "repeat this one"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 7,
+            "end": 13
+          }
+        ],
+        "text": "please repeat"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 17,
+            "end": 23
+          }
+        ],
+        "text": "could you please repeat"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 17,
+            "end": 23
+          }
+        ],
+        "text": "could you please repeat that"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "repeat",
+            "start": 7,
+            "end": 13
+          }
+        ],
+        "text": "kindly repeat"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same song again",
+            "start": 9,
+            "end": 24
+          }
+        ],
+        "text": "Play the same song again"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same item again",
+            "start": 9,
+            "end": 24
+          }
+        ],
+        "text": "Play the same item again"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same joke again",
+            "start": 9,
+            "end": 24
+          }
+        ],
+        "text": "Play the same joke again"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same prank call again",
+            "start": 9,
+            "end": 30
+          }
+        ],
+        "text": "Play the same prank call again"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same  again",
+            "start": 9,
+            "end": 20
+          }
+        ],
+        "text": "Play the same  again"
+      },
+      {
+        "intent": "repeat",
+        "entities": [
+          {
+            "entity": "repeat",
+            "value": "same item again",
+            "start": 9,
+            "end": 24
+          }
+        ],
+        "text": "Play the same item again"
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add current",
+            "start": 0,
+            "end": 11
+          }
+        ],
+        "text": "add current to my favourate playlist "
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add current",
+            "start": 0,
+            "end": 11
+          }
+        ],
+        "text": "add current to my favourate playlist "
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add current",
+            "start": 7,
+            "end": 18
+          }
+        ],
+        "text": "please add current to my favourate playlist "
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add last",
+            "start": 7,
+            "end": 15
+          }
+        ],
+        "text": "please add last to my favourate playlist "
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add last",
+            "start": 8,
+            "end": 16
+          }
+        ],
+        "text": "can you add last to my favourate playlist"
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add last",
+            "start": 6,
+            "end": 14
+          }
+        ],
+        "text": "wanna add last to my favourate playlist"
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add last",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "text": "add last to my favourate"
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add this",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "text": "add this to favourate"
+      },
+      {
+        "intent": "add_to_my_favourate",
+        "entities": [
+          {
+            "entity": "add_favourate",
+            "value": "add that",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "text": "add that to favourate"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "trending",
+            "start": 5,
+            "end": 13
+          }
+        ],
+        "text": "play trending"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "the hits",
+            "start": 5,
+            "end": 13
+          }
+        ],
+        "text": "play the hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "todays hits",
+            "start": 5,
+            "end": 16
+          }
+        ],
+        "text": "play todays hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "this weeks hits",
+            "start": 5,
+            "end": 20
+          }
+        ],
+        "text": "play this weeks hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "this months hits",
+            "start": 5,
+            "end": 21
+          }
+        ],
+        "text": "play this months hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "top hits",
+            "start": 5,
+            "end": 13
+          }
+        ],
+        "text": "play top hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "hits",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "text": "play hits"
+      },
+      {
+        "intent": "play_trending",
+        "entities": [
+          {
+            "entity": "trend",
+            "value": "hits",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "text": "play hits"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}
