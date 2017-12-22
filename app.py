@@ -44,11 +44,9 @@ from rasa_nlu_prog import *
 from utils import next_event
 
 from spacy import load
-import en_core_web_sm
+#import en_core_web_sm
 
-sputnik.install('spacy', spacy.about.version, 'en_default')
-
-
+sputnik.install('spacy', spacy.about.version, 'en_default', data_path='/tmp/spacy/')
 
 
 maintain_history = []
