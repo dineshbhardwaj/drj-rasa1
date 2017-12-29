@@ -37,7 +37,7 @@ def webhook():
     req = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com').read()
     print("done req")
     print(req)
-    res = makeWebhookResult(req)
+    res = makeWebhookResult(str(req))
     res = json.dumps(res, indent=4)
     # print(res)
     r = make_response(res)
