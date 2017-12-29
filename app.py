@@ -34,7 +34,9 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    req = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com').read()
+    req_open = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com')
+    f = io.TextIOWrapper(req_open,encoding='utf-8')
+    req=f.read()
     print("done req")
     print(req)
     res = makeWebhookResult(str(req))
