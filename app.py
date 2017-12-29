@@ -63,9 +63,10 @@ CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
 @app.route('/webhook', methods=['POST'])
 def webhook():
     print("inside webhook")
-    data = urllib.urlopen('http://diveintomark.org/xml/atom.xml').read()    1
+    data = urllib.urlopen('http://diveintomark.org/xml/atom.xml').read()
     print(data)
-    req = requests.post('http://ec2-54-197-17-247.compute-1.amazonaws.com')
+    req = urllib.urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com').read()
+    #req = requests.post('http://ec2-54-197-17-247.compute-1.amazonaws.com')
     req2=requests.post('http://google.com')
     print(str(req))
     print(str(req2))
