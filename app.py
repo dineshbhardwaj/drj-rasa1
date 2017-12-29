@@ -37,13 +37,12 @@ def webhook():
     print("start req")
     mydata=request.data
     print(mydata)
-    req_open = requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id})
+    req_open = requests.post('http://ec2-52-91-195-59.compute-1.amazonaws.com', data = {'session_id1':"yes i know"})
+    print(req_open.text)
     #req_open = Request("http://ec2-54-197-17-247.compute-1.amazonaws.com/webhook",mydata)
     #req_open = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com')
-    print("start req 1")
-    f = io.TextIOWrapper(req_open,encoding='utf-8')
     print("start req 2")
-    req=f.read()
+    req=req_open.text
     print("done req")
     print(req)
     res = makeWebhookResult(str(req))
