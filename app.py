@@ -13,7 +13,7 @@ import sys
 import apiai
 import requests
 import time
-
+import io
 
 from flask import Flask
 from flask import request
