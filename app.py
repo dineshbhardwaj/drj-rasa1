@@ -35,7 +35,10 @@ app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     print("start req")
-    req_open = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com')
+    mydata=request.data
+    print(mydata)
+    req_open = Request("http://ec2-54-197-17-247.compute-1.amazonaws.com",mydata)
+    #req_open = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com')
     print("start req 1")
     f = io.TextIOWrapper(req_open,encoding='utf-8')
     print("start req 2")
