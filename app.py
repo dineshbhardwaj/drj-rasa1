@@ -37,7 +37,7 @@ def webhook():
     print("start req")
     mydata=request.data
     print(mydata)
-    req_open = requests.post('http://ec2-52-91-195-59.compute-1.amazonaws.com', data = {'session_id1':"yes i know"})
+    req_open = requests.post('http://ec2-52-91-195-59.compute-1.amazonaws.com', mydata)
     print(req_open.text)
     #req_open = Request("http://ec2-54-197-17-247.compute-1.amazonaws.com/webhook",mydata)
     #req_open = urlopen('http://ec2-54-197-17-247.compute-1.amazonaws.com')
