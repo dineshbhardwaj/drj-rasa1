@@ -39,7 +39,7 @@ from fuzzywuzzy import process
 from song_data import *
 from rq import Queue
 from worker import conn
-from rasa_nlu_prog import *
+#from rasa_nlu_prog import *
 
 from utils import next_event
 
@@ -62,48 +62,49 @@ CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    req = request.get_json(silent=True, force=True)
-    q = Queue(connection=conn)
-    print("Request:")
+    req = requests.post('http://ec2-54-197-17-247.compute-1.amazonaws.com')
+#    req = request.get_json(silent=True, force=True)
+#    q = Queue(connection=conn)
+#    print("Request:")
 #    print(json.dumps(req, indent=4))
-    res = processRequest(req)
-    res = json.dumps(res, indent=4)
+#    res = processRequest(req)
+#    res = json.dumps(res, indent=4)
     # print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
+#    r = make_response(res)
+#    r.headers['Content-Type'] = 'application/json'
     #if not session_id:
-    print("session id1")
-    session_id=req.get("sessionId")
-    print("Session id2",session_id)
+#    print("session id1")
+#    session_id=req.get("sessionId")
+#    print("Session id2",session_id)
     #next_req = q.enqueue(requests.post('https://drj1.herokuapp.com/next', data = {'session_id1':session_id}))
     #if "nextevent" not in str(req.get("result").get("resolvedQuery")):
         #next_req = q.enqueue(next_event,session_id)
     #result = q.enqueue(count_words_at_url, 'http://heroku.com')
     #time.sleep(1)
 
-    print("queue working")
-    return r
+#    print("queue working")
+    return req
 
 
 
-def processRequest(req):
-    print("processing req")
-    input_data = str(req)
-    print(input_data)
-    input_data = str(req.get("result").get("resolvedQuery"))
+#temp def processRequest(req):
+#temp     print("processing req")
+#temp     input_data = str(req)
+#temp     print(input_data)
+#temp     input_data = str(req.get("result").get("resolvedQuery"))
 #   input_data = str(req.get("queryResult").get("queryText"))
-    choice_val_list = run_hindiSong(input_data)
-    entity_name_list = choice_val_list[0]
-    entity_val_list = choice_val_list[0]
+#temp     choice_val_list = run_hindiSong(input_data)
+#temp     entity_name_list = choice_val_list[0]
+#temp     entity_val_list = choice_val_list[0]
     
-    print("processing req 3")
-    if "song_name" in  entity_name_list[0]:
-            choice_val = process.extract(entity_val_list[0], choices, scorer=fuzz.partial_ratio, limit=1)
-    choice_song_path = map_choices[choice_val[0][0]]
-    choice_song_path1 = map_choices["Tera Mera Pyar Amar"]
-    print("processing req 4")
-    print(str(choice_song_path))
-    data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
+#temp     print("processing req 3")
+#temp     if "song_name" in  entity_name_list[0]:
+#temp             choice_val = process.extract(entity_val_list[0], choices, scorer=fuzz.partial_ratio, limit=1)
+#temp     choice_song_path = map_choices[choice_val[0][0]]
+#temp     choice_song_path1 = map_choices["Tera Mera Pyar Amar"]
+#temp     print("processing req 4")
+#temp     print(str(choice_song_path))
+#temp     data = "<speak> <audio src=\"" + choice_song_path + "\"> didn't get your MP3 audio file </audio> </speak>"
     
     ###CODE FOR PLAYLIST####
     ## temp removed song_num=0
@@ -124,8 +125,8 @@ def processRequest(req):
     #    <break time=\"3s\"/> \
     #    <audio src=\"" + choice_song_path1 + "\"> didn't get your MP3 audio file </audio> </speak>"
     ########################################
-    res = makeWebhookResult(data)
-    return res
+#temp     res = makeWebhookResult(data)
+#temp     return res
 
 
 def makeWebhookResult(data):
