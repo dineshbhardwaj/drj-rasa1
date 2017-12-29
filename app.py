@@ -63,6 +63,7 @@ CLIENT_ACCESS_TOKEN = '9ded4fd3df4b42b7b678b928add51dbf'
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = requests.post('http://ec2-54-197-17-247.compute-1.amazonaws.com')
+    print(str(req))
 #    req = request.get_json(silent=True, force=True)
 #    q = Queue(connection=conn)
 #    print("Request:")
